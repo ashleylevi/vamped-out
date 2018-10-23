@@ -1843,8 +1843,8 @@ const episodes = [
 ];
 
 
-module.exports = {
+export {
   tvShow, 
-  spinoff,
+  spinOff,
   episodes
 };
