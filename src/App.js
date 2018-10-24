@@ -8,10 +8,23 @@ import Carousel from './Carousel.js';
     constructor() {
       super();
       this.state = {
-        episodes: episodes,
-        episodeCount: 5
+        buffy: [],
+        angel: []
+        // episodeCount: 
       }
+  }
 
+  componentDidMount() {
+      Promise.all([fetch('https://whateverly-datasets.herokuapp.com/api/v1/tvShow'),
+        fetch('https://whateverly-datasets.herokuapp.com/api/v1/spinOff')])
+    .then(([responseOne, responseTwo]) => [responseOne.json(), responseTwo.json()])
+    .then(([buffy, angel]) => {
+      this.setState({
+        buffy: tvShow.episodes,
+        angel: spinOff.episodes
+      })
+    })
+    .catch(error => console.log(error))
   }
 
   render() {
@@ -23,8 +36,8 @@ import Carousel from './Carousel.js';
           </h1>
         </header>
         <Search />
-        <Carousel episodes={this.state.episodes}
-                  episodeCount={this.state.episodeCount}/>
+        <Carousel buffyEpisodes={this.state.buffy} 
+                  angelEpisodes = {this.state.angel} />
       </div>
     );
   }

@@ -8,10 +8,14 @@ export default function Carousel(props) {
       <div className="carousel">
         <ul>
           {
-            props.episodes.map((episode, index) => {
-              return <Card episode={episode.name}/>
-
-            }).slice(0, props.episodeCount)
+            props.buffyEpisodes.map((episode) => {
+              return <Card episode={episode} />
+            })
+          }
+          {
+            props.angelEpisodes.map((episode) => {
+              return <Card episode={episode} />
+            })
           }
         </ul>
       </div>
