@@ -1,28 +1,48 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Search from './Search.js';
+import { tvShow, spinOff, episodes } from './Data.js';
+import Carousel from './Carousel.js';
 
-class App extends Component {
+  class App extends Component {
+    constructor() {
+      super();
+      this.state = {
+        buffy: [],
+        angel: []
+        // episodeCount: 
+      }
+  }
+
+  componentDidMount() {
+      Promise.all([fetch('https://whateverly-datasets.herokuapp.com/api/v1/tvShow'),
+        fetch('https://whateverly-datasets.herokuapp.com/api/v1/spinOff')])
+    .then(([responseOne, responseTwo]) => [responseOne.json(), responseTwo.json()])
+    .then(([buffy, angel]) => {
+      this.setState({
+        buffy: tvShow.episodes,
+        angel: spinOff.episodes
+      })
+    })
+    .catch(error => console.log(error))
+  }
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <h1>
+            Buffy Flix
+          </h1>
         </header>
+        <Search />
+        <Carousel buffyEpisodes={this.state.buffy} 
+                  angelEpisodes = {this.state.angel} />
       </div>
     );
   }
 }
+
+
 
 export default App;
