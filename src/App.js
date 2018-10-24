@@ -35,7 +35,8 @@ import Carousel from './Carousel.js';
             Buffy Flix
           </h1>
         </header>
-        <Search />
+        <Search buffyEpisodes={this.state.buffy} 
+                angelEpisodes = {this.state.angel} />
         <Carousel buffyEpisodes={this.state.buffy} 
                   angelEpisodes = {this.state.angel} />
       </div>
