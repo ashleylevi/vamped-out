@@ -13,7 +13,9 @@ export default class Search extends Component {
   filterCards =(e) => {
     const result = this.props.buffyEpisodes.filter(episode => {
       let episodeValues = Object.values(episode)
-      return episodeValues.includes(e.target.value)
+      for(let i = 0; i < episodeValues.length; i++) {
+        return episodeValues[i].includes(e.target.value) 
+      }
     })
     console.log(result)
 
@@ -21,9 +23,11 @@ export default class Search extends Component {
 
 
   render() {
+    console.log(this.props.buffyEpisodes)
     return (
       <div className="search-bar-container">
         <input type="text" placeholder="Search for your favorite Buffy or Angel episodes" onKeyUp={this.filterCards}/>
+
       </div>
     );
   }
