@@ -9,9 +9,7 @@ const tvShow = {
    ],
    "premiered":"03-10-1997",
    "seasons":7,
-   "rating":{  
-      "average":8.2
-   },
+   "rating":8.2,
    "creator":"Joss Whedon",
    "summary":"A young woman, destined to slay vampires, demons and other infernal creatures, deals with her life fighting evil, with the help of her friends.",
    "spinoff":"Angel",
@@ -37,9 +35,7 @@ const tvShow = {
             "Stake"
          ],
          "deathcount":2,
-         "rating":{  
-            "average":8.2
-         },
+         "rating":8.2,
          "network":"The WB",
          "writer":"Joss Whedon",
          "url":"https://www.imdb.com/title/tt0452716/?ref_=ttep_ep2",
@@ -70,9 +66,7 @@ const tvShow = {
             "Stake"
          ],
          "deathcount":7,
-         "rating":{  
-            "average":8
-         },
+         "rating":8,
          "network":"The WB",
          "writer":"Joss Whedon",
          "url":"https://www.imdb.com/title/tt0533501/?ref_=tt_ep_nx",
@@ -100,9 +94,7 @@ const tvShow = {
             "Stake"
          ],
          "deathcount":0,
-         "rating":{  
-            "average":7.8
-         },
+         "rating":7.8,
          "network":"The WB",
          "writer":"Dana Reston",
          "url":"https://www.imdb.com/title/tt0533527/?ref_=tt_ep_nx",
@@ -129,9 +121,7 @@ const tvShow = {
             "Machete"
          ],
          "deathcount":4,
-         "rating":{  
-            "average":7.1
-         },
+         "rating":7.1,
          "network":"The WB",
          "writer":"David Greenwalt",
          "url":"https://www.imdb.com/title/tt0533494/?ref_=tt_ep_nx",
@@ -158,9 +148,7 @@ const tvShow = {
             "Sunndaydale Press"
          ],
          "deathcount":6,
-         "rating":{  
-            "average":7.6
-         },
+         "rating":7.6,
          "network":"The WB",
          "writer":"Rob Des Hotel",
          "url":"https://www.imdb.com/title/tt0533459/?ref_=tt_ep_nx",
@@ -185,9 +173,7 @@ const tvShow = {
             "Desk"
          ],
          "deathcount":3,
-         "rating":{  
-            "average":7.6
-         },
+         "rating":7.6,
          "network":"The WB",
          "writer":"Matt Kiene",
          "url":"https://www.imdb.com/title/tt0533505/?ref_=tt_ep_nx",
@@ -218,9 +204,7 @@ const tvShow = {
             "Stake"
          ],
          "deathcount":4,
-         "rating":{  
-            "average":8.6
-         },
+         "rating":8.6,
          "network":"The WB",
          "writer":"David Greenwalt",
          "url":"https://www.imdb.com/title/tt0533388/?ref_=tt_ep_nx",
@@ -244,9 +228,7 @@ const tvShow = {
             "Tome of Moloch"
          ],
          "deathcount":4,
-         "rating":{  
-            "average":6.9
-         },
+         "rating":6.9,
          "network":"The WB",
          "writer":"Ashley Gable",
          "url":"https://www.imdb.com/title/tt0533445/?ref_=tt_ep_nx",
@@ -271,9 +253,7 @@ const tvShow = {
 
          ],
          "deathcount":4,
-         "rating":{  
-            "average":7.8
-         },
+         "rating":7.8,
          "network":"The WB",
          "writer":"Rob Des Hotel",
          "url":"https://www.imdb.com/title/tt0533507/?ref_=tt_ep_nx",
@@ -299,9 +279,7 @@ const tvShow = {
             "Sunnydale Press"
          ],
          "deathcount":2,
-         "rating":{  
-            "average":8.4
-         },
+         "rating":8.4,
          "network":"The WB",
          "writer":"Joss Whedon",
          "url":"https://www.imdb.com/title/tt0533462/?ref_=tt_ep_nx",
@@ -326,9 +304,7 @@ const tvShow = {
 
          ],
          "deathcount":0,
-         "rating":{  
-            "average":7.9
-         },
+         "rating":7.9,
          "network":"The WB",
          "writer":"Joss Whedon",
          "url":"https://www.imdb.com/title/tt0533467/?ref_=tt_ep_nx",
@@ -356,9 +332,7 @@ const tvShow = {
             "Crossbow"
          ],
          "deathcount":11,
-         "rating":{  
-            "average":8.9
-         },
+         "rating":8.9,
          "network":"The WB",
          "writer":"Joss Whedon",
          "url":"https://www.imdb.com/title/tt0533474/?ref_=tt_ep_nx",
@@ -388,9 +362,7 @@ const tvShow = {
             "Jeep"
          ],
          "deathcount":7,
-         "rating":{  
-            "average":8.3
-         },
+         "rating":8.3,
          "network":"The WB",
          "writer":"Joss Whedon",
          "url":"https://www.imdb.com/title/tt0533523/?ref_=tt_ep_nx",
@@ -417,9 +389,7 @@ const tvShow = {
             "Stake"
          ],
          "deathcount":5,
-         "rating":{  
-            "average":7.2
-         },
+         "rating":7.2,
          "network":"The WB",
          "writer":"Ty King",
          "url":"https://www.imdb.com/title/tt0533487/?ref_=tt_ep_nx",
@@ -450,9 +420,7 @@ const tvShow = {
             "Stake"
          ],
          "deathcount":9,
-         "rating":{  
-            "average":8.9
-         },
+         "rating":8.9,
          "network":"The WB",
          "writer":"David Greenwalt",
          "url":"https://www.imdb.com/title/tt0533480/?ref_=tt_ep_nx",
@@ -480,9 +448,7 @@ const tvShow = {
             "Oz's Zebra-Striped Van"
          ],
          "deathcount":9,
-         "rating":{  
-            "average":7.4
-         },
+         "rating":7.4,
          "network":"The WB",
          "writer":"Matt Kiene",
          "url":"https://www.imdb.com/title/tt0533447/?ref_=tt_ep_nx",
@@ -509,9 +475,7 @@ const tvShow = {
             "Sword"
          ],
          "deathcount":4,
-         "rating":{  
-            "average":7.3
-         },
+         "rating":7.3,
          "network":"The WB",
          "writer":"David Greenwalt",
          "url":"https://www.imdb.com/title/tt0533476/?ref_=tt_ep_nx",
@@ -543,9 +507,7 @@ const tvShow = {
             "Oz's Zebra-Striped Van"
          ],
          "deathcount":2,
-         "rating":{  
-            "average":8.9
-         },
+         "rating":8.9,
          "network":"The WB",
          "writer":"Carl Ellsworth",
          "url":"https://www.imdb.com/title/tt0533437/?ref_=tt_ep_nx",
@@ -572,9 +534,7 @@ const tvShow = {
             "Stake"
          ],
          "deathcount":4,
-         "rating":{  
-            "average":8.5
-         },
+         "rating":8.5,
          "network":"The WB",
          "writer":"Joss Whedon",
          "url":"https://www.imdb.com/title/tt0533453/?ref_=tt_ep_nx",
@@ -600,9 +560,7 @@ const tvShow = {
             "Mark of Eyghon"
          ],
          "deathcount":7,
-         "rating":{  
-            "average":8
-         },
+         "rating":8,
          "network":"The WB",
          "writer":"Dean Batali",
          "url":"https://www.imdb.com/title/tt0533497/?ref_=tt_ep_nx",
@@ -635,9 +593,7 @@ const tvShow = {
             "Watchers Diaries"
          ],
          "deathcount":3,
-         "rating":{  
-            "average":8.5
-         },
+         "rating":8.5,
          "network":"The WB",
          "writer":"Howard Gordon",
          "url":"https://www.imdb.com/title/tt0533521/?ref_=tt_ep_nx",
@@ -668,9 +624,7 @@ const tvShow = {
             "Stake"
          ],
          "deathcount":4,
-         "rating":{  
-            "average":8.7
-         },
+         "rating":8.7,
          "network":"The WB",
          "writer":"Marti Noxon",
          "url":"https://www.imdb.com/title/tt0533522/?ref_=tt_ep_nx",
@@ -701,9 +655,7 @@ const tvShow = {
             "Sunnydale Press"
          ],
          "deathcount":7,
-         "rating":{  
-            "average":7.6
-         },
+         "rating":7.6,
          "network":"The WB",
          "writer":"David Greenwalt",
          "url":"https://www.imdb.com/title/tt0533495/?ref_=ttep_ep11",
@@ -730,9 +682,7 @@ const tvShow = {
             "Toolbox"
          ],
          "deathcount":7,
-         "rating":{  
-            "average":6.7
-         },
+         "rating":6.7,
          "network":"The WB",
          "writer":"Marti Noxon",
          "url":"https://www.imdb.com/title/tt0533391/?ref_=tt_ep_nx",
@@ -762,9 +712,7 @@ const tvShow = {
             "Claddagh Ring"
          ],
          "deathcount":3,
-         "rating":{  
-            "average":8.8
-         },
+         "rating":8.8,
          "network":"The WB",
          "writer":"Marti Noxon",
          "url":"https://www.imdb.com/title/tt0533492/?ref_=tt_ep_nx",
@@ -798,9 +746,7 @@ const tvShow = {
             "Rocket Launcher"
          ],
          "deathcount":4,
-         "rating":{  
-            "average":9.3
-         },
+         "rating":9.3,
          "network":"The WB",
          "writer":"Joss Whedon",
          "url":"https://www.imdb.com/title/tt0533448/?ref_=tt_ep_nx",
@@ -827,9 +773,7 @@ const tvShow = {
             "Sunnydale Press"
          ],
          "deathcount":1,
-         "rating":{  
-            "average":8.2
-         },
+         "rating":8.2,
          "network":"The WB",
          "writer":"Rob Des Hotel",
          "url":"https://www.imdb.com/title/tt0533471/?ref_=tt_ep_nx",
@@ -862,9 +806,7 @@ const tvShow = {
             "Knife"
          ],
          "deathcount":2,
-         "rating":{  
-            "average":8.8
-         },
+         "rating":8.8,
          "network":"The WB",
          "writer":"Marti Noxon",
          "url":"https://www.imdb.com/title/tt0533401/?ref_=tt_ep_nx",
@@ -892,9 +834,7 @@ const tvShow = {
             "Orb of Thesulah"
          ],
          "deathcount":4,
-         "rating":{  
-            "average":9.4
-         },
+         "rating":9.4,
          "network":"The WB",
          "writer":"Ty King",
          "url":"https://www.imdb.com/title/tt0533470/?ref_=tt_ep_nx",
@@ -919,9 +859,7 @@ const tvShow = {
 
          ],
          "deathcount":4,
-         "rating":{  
-            "average":7.6
-         },
+         "rating":7.6,
          "network":"The WB",
          "writer":"Rob Des Hotel",
          "url":"https://www.imdb.com/title/tt0533451/?ref_=tt_ep_nx",
@@ -947,9 +885,7 @@ const tvShow = {
 
          ],
          "deathcount":3,
-         "rating":{  
-            "average":8.6
-         },
+         "rating":8.6,
          "network":"The WB",
          "writer":"Marti Noxon",
          "url":"https://www.imdb.com/title/tt0533444/?ref_=tt_ep_nx",
@@ -975,9 +911,7 @@ const tvShow = {
 
          ],
          "deathcount":2,
-         "rating":{  
-            "average":6.9
-         },
+         "rating":6.9,
          "network":"The WB",
          "writer":"Marti Noxon",
          "url":"https://www.imdb.com/title/tt0533431/?ref_=tt_ep_nx",
@@ -1008,9 +942,7 @@ const tvShow = {
 
          ],
          "deathcount":14,
-         "rating":{  
-            "average":9.2
-         },
+         "rating":9.2,
          "network":"The WB",
          "writer":"Joss Whedon",
          "url":"https://www.imdb.com/title/tt0533397/?ref_=tt_ep_nx",
@@ -1040,9 +972,7 @@ const tvShow = {
 
          ],
          "deathcount":5,
-         "rating":{  
-            "average":9.2
-         },
+         "rating":9.2,
          "network":"The WB",
          "writer":"Joss Whedon",
          "url":"https://www.imdb.com/title/tt0533398/?ref_=tt_ep_nx",
@@ -1063,9 +993,7 @@ const spinOff = {
    ],
    "premiered":"10-05-1999",
    "seasons":5,
-   "rating":{  
-      "average":8
-   },
+   "rating":8,
    "creator":"Joss Whedon",
    "summary":"The vampire Angel, cursed with a soul, moves to Los Angeles and aids people with supernatural-related problems while questing for his own redemption.",
    "episodes":[  
@@ -1085,9 +1013,7 @@ const spinOff = {
 
          ],
          "deathcount":7,
-         "rating":{  
-            "average":8.7
-         },
+         "rating":8.7,
          "network":"The WB",
          "writer":"Joss Whedon",
          "url":"https://www.imdb.com/title/tt0512834/?ref_=ttep_ep2",
@@ -1109,9 +1035,7 @@ const spinOff = {
 
          ],
          "deathcount":6,
-         "rating":{  
-            "average":8.1
-         },
+         "rating":8.1,
          "network":"The WB",
          "writer":"David Fury",
          "url":"https://www.imdb.com/title/tt0512871/?ref_=tt_ep_nx",
@@ -1134,9 +1058,7 @@ const spinOff = {
 
          ],
          "deathcount":1,
-         "rating":{  
-            "average":8.7
-         },
+         "rating":8.7,
          "network":"The WB",
          "writer":"Douglas Petrie",
          "url":"https://www.imdb.com/title/tt0512865/?ref_=tt_ep_nx",
@@ -1158,9 +1080,7 @@ const spinOff = {
 
          ],
          "deathcount":2,
-         "rating":{  
-            "average":7.2
-         },
+         "rating":7.2,
          "network":"The WB",
          "writer":"David Greenwalt",
          "url":"https://www.imdb.com/title/tt0512862/?ref_=tt_ep_nx",
@@ -1183,9 +1103,7 @@ const spinOff = {
 
          ],
          "deathcount":5,
-         "rating":{  
-            "average":8.4
-         },
+         "rating":8.4,
          "network":"The WB",
          "writer":"Jane Espenson",
          "url":"https://www.imdb.com/title/tt0512890/?ref_=tt_ep_nx",
@@ -1207,9 +1125,7 @@ const spinOff = {
 
          ],
          "deathcount":4,
-         "rating":{  
-            "average":7.8
-         },
+         "rating":7.8,
          "network":"The WB",
          "writer":"Tim Minear",
          "url":"https://www.imdb.com/title/tt0512894/?ref_=tt_ep_nx",
@@ -1230,9 +1146,7 @@ const spinOff = {
 
          ],
          "deathcount":3,
-         "rating":{  
-            "average":7.5
-         },
+         "rating":7.5,
          "network":"The WB",
          "writer":"Tracy Stern",
          "url":"https://www.imdb.com/title/tt0512908/?ref_=tt_ep_nx",
@@ -1254,9 +1168,7 @@ const spinOff = {
 
          ],
          "deathcount":3,
-         "rating":{  
-            "average":9.3
-         },
+         "rating":9.3,
          "network":"The WB",
          "writer":"David Greenwalt",
          "url":"https://www.imdb.com/title/tt0512863/?ref_=tt_ep_nx",
@@ -1277,9 +1189,7 @@ const spinOff = {
 
          ],
          "deathcount":4,
-         "rating":{  
-            "average":9
-         },
+         "rating":9,
          "network":"The WB",
          "writer":"Tim Minear",
          "url":"https://www.imdb.com/title/tt0512860/?ref_=tt_ep_nx",
@@ -1301,9 +1211,7 @@ const spinOff = {
 
          ],
          "deathcount":3,
-         "rating":{  
-            "average":8.4
-         },
+         "rating":8.4,
          "network":"The WB",
          "writer":"David Fury",
          "url":"https://www.imdb.com/title/tt0512880/?ref_=tt_ep_nx",
@@ -1326,9 +1234,7 @@ const spinOff = {
 
          ],
          "deathcount":8,
-         "rating":{  
-            "average":8.6
-         },
+         "rating":8.6,
          "network":"The WB",
          "writer":"Tim Minear",
          "url":"https://www.imdb.com/title/tt0512901/?ref_=ttep_ep12",
@@ -1349,9 +1255,7 @@ const spinOff = {
 
          ],
          "deathcount":3,
-         "rating":{  
-            "average":7.6
-         },
+         "rating":7.6,
          "network":"The WB",
          "writer":"Howard Gordon",
          "url":"https://www.imdb.com/title/tt0512848/?ref_=tt_ep_nx",
@@ -1372,9 +1276,7 @@ const spinOff = {
 
          ],
          "deathcount":1,
-         "rating":{  
-            "average":7.1
-         },
+         "rating":7.1,
          "network":"The WB",
          "writer":"Marti Noxon",
          "url":"https://www.imdb.com/title/tt0512895/?ref_=tt_ep_nx",
@@ -1396,9 +1298,7 @@ const spinOff = {
 
          ],
          "deathcount":1,
-         "rating":{  
-            "average":8.3
-         },
+         "rating":8.3,
          "network":"The WB",
          "writer":"Marti Noxon",
          "url":"https://www.imdb.com/title/tt0512864/?ref_=tt_ep_nx",
@@ -1421,9 +1321,7 @@ const spinOff = {
 
          ],
          "deathcount":13,
-         "rating":{  
-            "average":8.3
-         },
+         "rating":8.3,
          "network":"The WB",
          "writer":"Tim Minear",
          "url":"https://www.imdb.com/title/tt0512914/?ref_=tt_ep_nx",
@@ -1446,9 +1344,7 @@ const spinOff = {
 
          ],
          "deathcount":6,
-         "rating":{  
-            "average":8.3
-         },
+         "rating":8.3,
          "network":"The WB",
          "writer":"Howard Gordon",
          "url":"https://www.imdb.com/title/tt0512915/?ref_=tt_ep_nx",
@@ -1469,9 +1365,7 @@ const spinOff = {
 
          ],
          "deathcount":0,
-         "rating":{  
-            "average":8.4
-         },
+         "rating":8.4,
          "network":"The WB",
          "writer":"Tracey Stern",
          "url":"https://www.imdb.com/title/tt0512847/?ref_=tt_ep_nx",
@@ -1495,9 +1389,7 @@ const spinOff = {
 
          ],
          "deathcount":4,
-         "rating":{  
-            "average":9.3
-         },
+         "rating":9.3,
          "network":"The WB",
          "writer":"Jim Kouf",
          "url":"https://www.imdb.com/title/tt0512850/?ref_=tt_ep_nx",
@@ -1523,9 +1415,7 @@ const spinOff = {
 
          ],
          "deathcount":2,
-         "rating":{  
-            "average":9.3
-         },
+         "rating":9.3,
          "network":"The WB",
          "writer":"Tim Minear",
          "url":"https://www.imdb.com/title/tt0512893/?ref_=tt_ep_nx",
@@ -1547,9 +1437,7 @@ const spinOff = {
 
          ],
          "deathcount":10,
-         "rating":{  
-            "average":8.1
-         },
+         "rating":8.1,
          "network":"The WB",
          "writer":"Gary Campbell",
          "url":"https://www.imdb.com/title/tt0512928/?ref_=tt_ep_nx",
@@ -1574,9 +1462,7 @@ const spinOff = {
 
          ],
          "deathcount":7,
-         "rating":{  
-            "average":8.7
-         },
+         "rating":8.7,
          "network":"The WB",
          "writer":"Jeannine Renshaw",
          "url":"https://www.imdb.com/title/tt0512830/?ref_=tt_ep_nx",
@@ -1603,9 +1489,7 @@ const spinOff = {
 
          ],
          "deathcount":8,
-         "rating":{  
-            "average":9.1
-         },
+         "rating":9.1,
          "network":"The WB",
          "writer":"David Greenwalt",
          "url":"https://www.imdb.com/title/tt0512922/?ref_=tt_ep_nx",

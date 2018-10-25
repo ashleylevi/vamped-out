@@ -9,8 +9,9 @@ import Carousel from './Carousel.js';
       super();
       this.state = {
         buffy: [],
-        angel: []
-        // episodeCount: 
+        angel: [],
+        filteredBuffy: [], 
+        filteredAngel: [], 
       }
   }
 
@@ -27,24 +28,42 @@ import Carousel from './Carousel.js';
     .catch(error => console.log(error))
   }
 
-  filterCards =(searchValue) => {
+  filterBuffyCards =(searchValue) => {
     console.log('searchValue: ', searchValue)
-    const result = this.state.buffy.reduce((arr, episode) => {
+    const filteredBuffy = this.state.buffy.reduce((arr, episode) => {
       let episodeValues = [].concat(...Object.values(episode))
-      let newResult = episodeValues.forEach((str) => {
+      episodeValues.forEach((str) => {
         if (str.toString().toLowerCase().includes(searchValue.toLowerCase()) && !arr.includes(episode)) {
           arr.push(episode)
         }
       })
-
       return arr;
-    }, [])
-    console.log('result', result)
+    }, []);
 
+    this.setState({
+      filteredBuffy
+    })
+  }
+
+   filterAngelCards =(searchValue) => {
+    console.log('searchValue: ', searchValue)
+    const filteredAngel = this.state.angel.reduce((arr, episode) => {
+      let episodeValues = [].concat(...Object.values(episode))
+      episodeValues.forEach((str) => {
+        if (str.toString().toLowerCase().includes(searchValue.toLowerCase()) && !arr.includes(episode)) {
+          arr.push(episode)
+        }
+      })
+      return arr;
+    }, []);
+
+    this.setState({
+      filteredAngel
+    })
   }
 
   render() {
-    const { buffy, angel } = this.state
+    const { buffy, angel, filteredBuffy, filteredAngel } = this.state
     return (
       <div className="App">
         <header className="App-header">
@@ -54,9 +73,10 @@ import Carousel from './Carousel.js';
         </header>
         <Search buffyEpisodes = {buffy} 
                 angelEpisodes = {angel} 
-                filter = {this.filterCards} />
-        <Carousel buffyEpisodes = {buffy} 
-                  angelEpisodes = {angel} />
+                filterBuffy = {this.filterBuffyCards}
+                filterAngel = {this.filterAngelCards}  />
+        <Carousel buffyEpisodes = {filteredBuffy} 
+                  angelEpisodes = {filteredAngel} />
       </div>
     );
   }
