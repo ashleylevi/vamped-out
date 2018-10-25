@@ -27,7 +27,24 @@ import Carousel from './Carousel.js';
     .catch(error => console.log(error))
   }
 
+  filterCards =(searchValue) => {
+    console.log('searchValue: ', searchValue)
+    const result = this.state.buffy.reduce((arr, episode) => {
+      let episodeValues = [].concat(...Object.values(episode))
+      let newResult = episodeValues.forEach((str) => {
+        if (str.toString().toLowerCase().includes(searchValue.toLowerCase()) && !arr.includes(episode)) {
+          arr.push(episode)
+        }
+      })
+
+      return arr;
+    }, [])
+    console.log('result', result)
+
+  }
+
   render() {
+    const { buffy, angel } = this.state
     return (
       <div className="App">
         <header className="App-header">
@@ -35,10 +52,11 @@ import Carousel from './Carousel.js';
             Buffy Flix
           </h1>
         </header>
-        <Search buffyEpisodes={this.state.buffy} 
-                angelEpisodes = {this.state.angel} />
-        <Carousel buffyEpisodes={this.state.buffy} 
-                  angelEpisodes = {this.state.angel} />
+        <Search buffyEpisodes = {buffy} 
+                angelEpisodes = {angel} 
+                filter = {this.filterCards} />
+        <Carousel buffyEpisodes = {buffy} 
+                  angelEpisodes = {angel} />
       </div>
     );
   }
