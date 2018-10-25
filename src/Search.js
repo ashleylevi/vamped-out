@@ -15,7 +15,8 @@ export default class Search extends Component {
       searchValue: e.target.value
     })
 
-    this.props.filter(this.state.searchValue);
+    this.props.filterBuffy(e.target.value);
+    this.props.filterAngel(e.target.value);
   } 
 
 
