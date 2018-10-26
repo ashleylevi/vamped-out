@@ -10,8 +10,8 @@ ul {
 .carousel {
   max-width:60%;
   padding:50px 50px 50px 50px;
-  position:relative;
   overflow: hidden;
+  display: flex;
 }
 
 .button {
@@ -22,7 +22,7 @@ ul {
 .fa-angle-left, .fa-angle-right {
   color: #af000e;
   font-size: 50px;
-  transition: 1s;
+  transition: .3s;
   opacity: .6;
 }
 

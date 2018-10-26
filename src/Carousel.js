@@ -5,8 +5,7 @@ import Card from './Card.js';
 
 export default function Carousel(props) {
   return (
-      <div className="carousel">
-
+      <div className="carousel">t
         <ul>
           <button className="button left-button"><i class="fas fa-angle-left"></i></button>
           {
