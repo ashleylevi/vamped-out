@@ -1,5 +1,21 @@
 li {
   border: 2px solid white;
+<<<<<<< HEAD
+  height: 300px;
+  margin: 0 3px 0 3px;
+  transition: all .2s ease-in-out;
+  width: 180px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+li:hover {
+  transform: scale(1.1);
+}
+
+
+=======
   height: 400px;
   width: 300px;
   transition: 1s;
@@ -35,3 +51,4 @@ li {
   width: 500px;
 
 }*/
+>>>>>>> 9fa6b277bb24a046b96e70ff05a42215cbf2d780
