@@ -3,5 +3,33 @@ ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  justify-content: center;
 }
+
+
+.carousel {
+  max-width:60%;
+  padding:50px 50px 50px 50px;
+  position:relative;
+  overflow: hidden;
+}
+
+.button {
+  background: none;
+  border: none;
+}
+
+.fa-angle-left, .fa-angle-right {
+  color: #af000e;
+  font-size: 50px;
+  transition: 1s;
+  opacity: .6;
+}
+
+.fa-angle-left:hover, .fa-angle-right:hover {
+  font-size: 80px;
+  cursor: pointer;
+}
+
+
 
