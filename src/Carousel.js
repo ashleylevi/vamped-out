@@ -5,21 +5,27 @@ import Card from './Card.js';
 
 export default function Carousel(props) {
   return (
-      <div className="carousel">t
+    <div className="carousel-wrapper">
+      <button className="button left-button"><i className="fas fa-angle-left"></i></button>
+      <div className="carousel">
+
         <ul>
-          <button className="button left-button"><i class="fas fa-angle-left"></i></button>
           {
             props.buffyEpisodes.map((episode) => {
-              return <Card episode={episode} />
+              return <Card episode={episode} 
+                           addToWatchList = {props.addToWatchList}/>
             })
           }
           {
             props.angelEpisodes.map((episode) => {
-              return <Card episode={episode} />
+              return <Card episode={episode} 
+                           addToWatchList = {props.addToWatchList}/>
             })
           }
-          <button className="button right-button"><i class="fas fa-angle-right"></i></button>
         </ul>
+
       </div>
+      <button className="button right-button"><i className="fas fa-angle-right"></i></button>
+    </div>
     );
   }

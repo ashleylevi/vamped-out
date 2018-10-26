@@ -6,10 +6,17 @@ ul {
   padding: 0;
 }
 
+.carousel-wrapper {
+  position: relative;
+  width:90%;
+  display:flex;
+  justify-content: center;
+
+}
 
 .carousel {
-  max-width:60%;
-  padding:50px 50px 50px 50px;
+  max-width:86.5%;
+  padding: 20px 0;
   overflow: hidden;
   display: flex;
 }
@@ -17,18 +24,26 @@ ul {
 .button {
   background: none;
   border: none;
+  position: absolute;
+  z-index: 50;
+  top: 40%;
+  left: 0;
 }
 
 .fa-angle-left, .fa-angle-right {
   color: #af000e;
   font-size: 50px;
-  transition: .3s;
+  transition: .2s;
   opacity: .6;
 }
 
 .fa-angle-left:hover, .fa-angle-right:hover {
-  font-size: 80px;
+  transform: scale(1.4);
   cursor: pointer;
+}
+
+.right-button {
+  left: 97%;
 }
 
 

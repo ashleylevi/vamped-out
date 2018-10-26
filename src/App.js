@@ -11,7 +11,8 @@ import Carousel from './Carousel.js';
         buffy: [],
         angel: [],
         filteredBuffy: [], 
-        filteredAngel: [], 
+        filteredAngel: [],
+        clickedCards: [] 
       }
   }
 
@@ -29,7 +30,6 @@ import Carousel from './Carousel.js';
   }
 
   filterBuffyCards =(searchValue) => {
-    console.log('searchValue: ', searchValue)
     const filteredBuffy = this.state.buffy.reduce((arr, episode) => {
       let episodeValues = [].concat(...Object.values(episode))
       episodeValues.forEach((str) => {
@@ -46,7 +46,6 @@ import Carousel from './Carousel.js';
   }
 
    filterAngelCards =(searchValue) => {
-    console.log('searchValue: ', searchValue)
     const filteredAngel = this.state.angel.reduce((arr, episode) => {
       let episodeValues = [].concat(...Object.values(episode))
       episodeValues.forEach((str) => {
@@ -59,6 +58,12 @@ import Carousel from './Carousel.js';
 
     this.setState({
       filteredAngel
+    })
+  }
+
+  addToWatchList = (clickedEpisode) => {
+    this.setState({
+      clickedCards: [...this.state.clickedCards, clickedEpisode]
     })
   }
 
@@ -76,7 +81,8 @@ import Carousel from './Carousel.js';
                 filterBuffy = {this.filterBuffyCards}
                 filterAngel = {this.filterAngelCards}  />
         <Carousel buffyEpisodes = {filteredBuffy} 
-                  angelEpisodes = {filteredAngel} />
+                  angelEpisodes = {filteredAngel} 
+                  addToWatchList = {this.addToWatchList} />
       </div>
     );
   }
