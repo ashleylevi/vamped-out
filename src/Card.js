@@ -7,7 +7,8 @@ export default class Card extends Component {
   }
   render() {
     return (
-      <li className="card">
+      <li className="card"
+      style={{ backgroundImage: `url(${this.props.episode.image})` }} >
         {
           this.props.episode.name
         }

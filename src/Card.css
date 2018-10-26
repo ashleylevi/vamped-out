@@ -3,7 +3,10 @@ li {
   height: 300px;
   margin: 0 3px 0 3px;
   transition: all .2s ease-in-out;
-  width: 100px;
+  width: 180px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 li:hover {
