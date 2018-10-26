@@ -67,7 +67,7 @@ import Carousel from './Carousel.js';
     return (
       <div className="App">
         <header className="App-header">
-          <h1>
+          <h1 className="animate-header">
             Buffy Flix
           </h1>
         </header>

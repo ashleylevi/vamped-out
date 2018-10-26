@@ -12,7 +12,7 @@ export default class Card extends Component {
         {
           this.props.episode.name
         }
-        
+        <i class="fas fa-plus"></i>
       </li>
     );
   }
