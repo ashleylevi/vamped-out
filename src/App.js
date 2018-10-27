@@ -70,6 +70,14 @@ import Watchlist from './Watchlist.js';
     })
   }
 
+  removeFromWatchlist = (removedCard) => {
+    var cardIndex = this.state.clickedCards.indexOf(removedCard);
+    this.state.clickedCards.splice(cardIndex, 1)
+    this.setState({
+      clickedCards: this.state.clickedCards
+    })  
+  }
+
   render() {
     const { buffy, angel, filteredBuffy, filteredAngel } = this.state
     return (
@@ -86,7 +94,8 @@ import Watchlist from './Watchlist.js';
         <Carousel buffyEpisodes = {filteredBuffy} 
                   angelEpisodes = {filteredAngel} 
                   addToWatchList = {this.addToWatchList} />
-        <Watchlist clickedCards={this.state.clickedCards} />
+        <Watchlist clickedCards={this.state.clickedCards}         removeFromWatchlist={this.removeFromWatchlist} />
+
       </div>
     );
   }
