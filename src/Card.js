@@ -34,7 +34,7 @@ export default class Card extends Component {
           <h3>Season {this.props.episode.season}</h3>
           <p>{this.props.episode.synopsis}</p>
           <div className="card-buttons">
-          <i class="fab fa-imdb"></i>
+          <i className="fab fa-imdb"></i>
           <i className="fas fa-plus" onClick={this.handleState}></i>
           </div>
         </div>
