@@ -8,7 +8,9 @@ export default class WatchlistCard extends Component {
   render() {
     return (
       <li className="watchlist-card">
-      {this.props.clickedCards.name} 
+      <h3>{this.props.card.name}</h3>
+      <p>Season {this.props.card.season}: 
+         Episode {this.props.card.number}</p>
       </li>
     );
   }
