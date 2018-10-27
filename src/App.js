@@ -9,10 +9,8 @@ import Watchlist from './Watchlist.js';
     constructor() {
       super();
       this.state = {
-        buffy: [],
-        angel: [],
-        filteredBuffy: [], 
-        filteredAngel: [],
+        allEpisodes: [],
+        filteredEpisodes: [],
         clickedCards: [] 
       }
   }
@@ -23,17 +21,15 @@ import Watchlist from './Watchlist.js';
     .then(([responseOne, responseTwo]) => [responseOne.json(), responseTwo.json()])
     .then(([buffy, angel]) => {
       this.setState({
-        buffy: tvShow.episodes,
-        filteredBuffy: tvShow.episodes,
-        angel: spinOff.episodes,
-        filteredAngel: spinOff.episodes,
+        allEpisodes: tvShow.episodes.concat(spinOff.episodes),
+        filteredEpisodes: tvShow.episodes.concat(spinOff.episodes)
       })
     })
     .catch(error => console.log(error))
   }
 
-  filterBuffyCards =(searchValue) => {
-    const filteredBuffy = this.state.buffy.reduce((arr, episode) => {
+  filterEpisodes =(searchValue) => {
+    const filteredEpisodes = this.state.allEpisodes.reduce((arr, episode) => {
       let episodeValues = [].concat(...Object.values(episode))
       episodeValues.forEach((str) => {
         if (str.toString().toLowerCase().includes(searchValue.toLowerCase()) && !arr.includes(episode)) {
@@ -44,23 +40,7 @@ import Watchlist from './Watchlist.js';
     }, []);
 
     this.setState({
-      filteredBuffy
-    })
-  }
-
-   filterAngelCards =(searchValue) => {
-    const filteredAngel = this.state.angel.reduce((arr, episode) => {
-      let episodeValues = [].concat(...Object.values(episode))
-      episodeValues.forEach((str) => {
-        if (str.toString().toLowerCase().includes(searchValue.toLowerCase()) && !arr.includes(episode)) {
-          arr.push(episode)
-        }
-      })
-      return arr;
-    }, []);
-
-    this.setState({
-      filteredAngel
+      filteredEpisodes
     })
   }
 
@@ -79,7 +59,7 @@ import Watchlist from './Watchlist.js';
   }
 
   render() {
-    const { buffy, angel, filteredBuffy, filteredAngel } = this.state
+    const { allEpisodes, filteredEpisodes } = this.state
     return (
       <div className="App">
         <header className="App-header">
@@ -87,14 +67,12 @@ import Watchlist from './Watchlist.js';
             Buffy Flix
           </h1>
         </header>
-        <Search buffyEpisodes = {buffy} 
-                angelEpisodes = {angel} 
-                filterBuffy = {this.filterBuffyCards}
-                filterAngel = {this.filterAngelCards}  />
-        <Carousel buffyEpisodes = {filteredBuffy} 
-                  angelEpisodes = {filteredAngel} 
+        <Search allEpisodes = {allEpisodes} 
+                filterEpisodes = {this.filterEpisodes} />
+        <Carousel filteredEpisodes = {filteredEpisodes} 
                   addToWatchList = {this.addToWatchList} />
-        <Watchlist clickedCards={this.state.clickedCards}         removeFromWatchlist={this.removeFromWatchlist} />
+        <Watchlist clickedCards={this.state.clickedCards}         
+                                removeFromWatchlist={this.removeFromWatchlist} />
 
       </div>
     );
@@ -103,4 +81,4 @@ import Watchlist from './Watchlist.js';
 
 
 
-export default App;
+export default App; 

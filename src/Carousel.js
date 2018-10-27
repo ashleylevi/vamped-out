@@ -11,13 +11,7 @@ export default function Carousel(props) {
 
         <ul>
           {
-            props.buffyEpisodes.map((episode) => {
-              return <Card episode={episode} 
-                           addToWatchList = {props.addToWatchList}/>
-            })
-          }
-          {
-            props.angelEpisodes.map((episode) => {
+            props.filteredEpisodes.map((episode) => {
               return <Card episode={episode} 
                            addToWatchList = {props.addToWatchList}/>
             })
