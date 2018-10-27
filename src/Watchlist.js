@@ -12,7 +12,6 @@ export default function Watchlist(props) {
         <ul>
           {
             props.clickedCards.map(card => {
-              console.log(card)
               return <WatchlistCard card={card} />
             })
           }
