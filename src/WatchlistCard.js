@@ -20,8 +20,7 @@ export default class WatchlistCard extends Component {
       <h3>{this.props.card.name}</h3>
       <p>Season {this.props.card.season}: 
          Episode {this.props.card.number}</p>
-      <button className="remove-button" onClick={this.handleState}>Remove</button> 
-        
+      <button className="remove-button" onClick={this.handleState}>Remove</button>     
       </li>
     );
   }

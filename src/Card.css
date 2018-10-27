@@ -24,6 +24,7 @@ p {
   font-size: 15px;
   margin-top: 0;
   margin-bottom: 0;
+  z-index: 2;
 }
 
 li {
@@ -77,13 +78,10 @@ li:hover .card-title {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  z-index: -1;
-                      
+  z-index: -1;                    
 }
 
-
 .background:hover {
-  background-color: black;
   opacity: .4;
 }
 
@@ -108,5 +106,17 @@ li:hover .caption, h3, p {
 .fa-plus:hover {
   transform: scale(1.3);
   cursor: pointer;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  opacity: 0;
+  position: absolute;
+}
+
+li:hover .overlay {
+  opacity: .7;
 }
 

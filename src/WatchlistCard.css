@@ -1,9 +1,14 @@
 .watchlist-card {
+  background: url('https://cdn.hipwallpaper.com/i/63/31/v0qCxb.png');
+  background-size: cover;
+  padding: 10px;
   height: 110px;
 }
+
 h2 {
   color: white;
 }
+
 h3 {
   font-size: 20px;
 }
