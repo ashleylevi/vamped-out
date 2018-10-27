@@ -23,7 +23,9 @@ import Carousel from './Carousel.js';
     .then(([buffy, angel]) => {
       this.setState({
         buffy: tvShow.episodes,
-        angel: spinOff.episodes
+        filteredBuffy: tvShow.episodes,
+        angel: spinOff.episodes,
+        filteredAngel: spinOff.episodes,
       })
     })
     .catch(error => console.log(error))
