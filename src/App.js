@@ -58,6 +58,22 @@ import Watchlist from './Watchlist.js';
     })  
   }
 
+  shiftCarousel = (e) => {
+    console.log(e.target)
+    if (e.target.className === "fas fa-angle-right") {
+      let spliced = this.state.filteredEpisodes.splice(0, 3)
+      this.setState({
+      filteredEpisodes: this.state.filteredEpisodes.concat(spliced)
+      })
+    } else {
+      let spliced = this.state.filteredEpisodes.splice(this.state.filteredEpisodes.length -3, 3)
+      this.setState({
+      filteredEpisodes: spliced.concat(this.state.filteredEpisodes)
+      })
+
+    }
+  }
+
   render() {
     const { allEpisodes, filteredEpisodes } = this.state
     return (
@@ -70,7 +86,8 @@ import Watchlist from './Watchlist.js';
         <Search allEpisodes = {allEpisodes} 
                 filterEpisodes = {this.filterEpisodes} />
         <Carousel filteredEpisodes = {filteredEpisodes} 
-                  addToWatchList = {this.addToWatchList} />
+                  addToWatchList = {this.addToWatchList} 
+                  shiftCarousel = {this.shiftCarousel}/>
         <Watchlist clickedCards={this.state.clickedCards}         
                                 removeFromWatchlist={this.removeFromWatchlist} />
 
