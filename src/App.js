@@ -3,6 +3,7 @@ import './App.css';
 import Search from './Search.js';
 import { tvShow, spinOff, episodes } from './Data.js';
 import Carousel from './Carousel.js';
+import Watchlist from './Watchlist.js';
 
   class App extends Component {
     constructor() {
@@ -85,6 +86,7 @@ import Carousel from './Carousel.js';
         <Carousel buffyEpisodes = {filteredBuffy} 
                   angelEpisodes = {filteredAngel} 
                   addToWatchList = {this.addToWatchList} />
+        <Watchlist clickedCards={this.state.clickedCards} />
       </div>
     );
   }
