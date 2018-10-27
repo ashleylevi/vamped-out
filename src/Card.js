@@ -22,7 +22,9 @@ export default class Card extends Component {
     if (this.props.episode.starring.includes('Willow')) {
     return (
       <li className="card">
-      <div className="background" style={{ backgroundImage: `url(${this.props.episode.image})` }}></div><h3 className="episode-name">
+      <div className="background" style={{ backgroundImage: `url(${this.props.episode.image})` }}></div>
+      <div className="overlay"></div>
+      <h3 className="episode-name">
         {
           this.props.episode.name
         }
