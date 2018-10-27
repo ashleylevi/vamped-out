@@ -1,0 +1,15 @@
+.watchlist-wrapper {
+  align-items: center;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 90%;
+}
+
+.watchlist {
+  display: flex;
+  max-width: 86.5%;
+  overflow: scroll;
+  padding: 20px 0;
+}
