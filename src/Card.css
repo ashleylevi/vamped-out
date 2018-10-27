@@ -1,6 +1,17 @@
+.card-title {
+  font-size: 25px;
+  margin-bottom: 0;
+  font-family: 'buffiedregular';
+    text-shadow:
+       3px 3px 5px #000, 1px 1px 1px #000, 3px 3px 1px #000, 2px 2px 2px #fff, 2px 2px 2px #000
+}
+
 h3 {
-  font-size: 14px;
+  font-size: 15px;
   margin: 14px;
+  font-weight: 700;
+  font-family: 'Open Sans Condensed', sans-serif;
+  text-transform: uppercase;
 }
 
 p {
@@ -8,28 +19,41 @@ p {
   margin: 14px;
 }
 
+.episode-name {
+  font-weight: 700;
+  font-size: 15px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 li {
-  border: 2px solid white;
+  border: 1px solid white;
   color: white;
   display:flex;
   flex-direction: column;
-  height: 300px;
-  justify-content: flex-end;
+  height: 390px;
+  /*justify-content: space-between;*/
   letter-spacing: 1px;
   list-style-type: none;
   margin: 0 3px;
   text-align: center;
   transition: all .2s ease-in-out;
-  width: 180px;
+  width: 220px;
   position: relative;
+  justify-content: flex-end;
 }
 
 li:hover {
   transform: scale(1.1);
+
 }
 
-.caption, h3, p {
-  opacity: 0;
+li:hover .card-title {
+  display: none;
+}
+
+.caption, p {
+  display: none;
   z-index: 2;
   transition: .7s;
 }
@@ -48,32 +72,41 @@ li:hover {
 
 .background {
   position: absolute;
-  height: 300px;
-  width: 180px;
+  height: 390px;
+  width: 220px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
+                      
 }
+
 
 .background:hover {
   background-color: black;
-  opacity: .7;
+  opacity: .4;
 }
 
 li:hover .caption, h3, p {
   opacity: 1;
+  display: block;
 }
 
 .fa-plus {
-  color: black;
+  color: #fff;
   font-size: 20px;
   margin: 20px 0 10px 0; 
   opacity: 1;
   transition: .3s;
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: 5px;
+  background-color: black;
+  opacity: .8;
 }
 
 .fa-plus:hover {
-  transform: scale(1.4);
+  transform: scale(1.3);
+  cursor: pointer;
 }
 

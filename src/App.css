@@ -13,7 +13,7 @@
   justify-content: center;
 }
 
-h1 {
+.header {
   text-align: center;
   font-family: 'buffiedregular';
   font-size: 100px;
