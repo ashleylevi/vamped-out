@@ -19,7 +19,6 @@ export default class Card extends Component {
 
 
   render() {
-    console.log('starring', this.props.episode.starring)
     if (this.props.episode.starring.includes('Willow')) {
     return (
       <li className="card">
