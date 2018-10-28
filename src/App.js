@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import Search from './Search.js';
-import { tvShow, spinOff, episodes } from './Data.js';
 import Carousel from './Carousel.js';
 import Watchlist from './Watchlist.js';
 

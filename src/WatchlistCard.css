@@ -15,7 +15,7 @@ h3 {
 
 .fa-times-circle {
   font-size: 20px;
-  transition: .3;
+  transition: .3s;
 }
 
 .fa-times-circle:hover {
