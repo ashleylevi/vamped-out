@@ -13,3 +13,7 @@
   overflow: scroll;
   padding: 20px 0;
 }
+
+h2 {
+  font-family: 'Open Sans Condensed', sans-serif;
+}

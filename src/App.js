@@ -11,6 +11,7 @@ import Watchlist from './Watchlist.js';
       this.state = {
         allEpisodes: [],
         filteredEpisodes: [],
+        unsortedFiltered: [],
         clickedCards: [] 
       }
   }
@@ -20,15 +21,17 @@ import Watchlist from './Watchlist.js';
         fetch('https://whateverly-datasets.herokuapp.com/api/v1/spinOff')])
     .then(([responseOne, responseTwo]) => [responseOne.json(), responseTwo.json()])
     .then(([buffy, angel]) => {
+      console.log(buffy)
       this.setState({
         allEpisodes: tvShow.episodes.concat(spinOff.episodes),
-        filteredEpisodes: tvShow.episodes.concat(spinOff.episodes)
+        filteredEpisodes: tvShow.episodes.concat(spinOff.episodes),
+        unsortedFiltered: tvShow.episodes.concat(spinOff.episodes)
       })
     })
     .catch(error => console.log(error))
   }
 
-  filterEpisodes =(searchValue) => {
+  filterEpisodes = (searchValue) => {
     const filteredEpisodes = this.state.allEpisodes.reduce((arr, episode) => {
       let episodeValues = [].concat(...Object.values(episode))
       episodeValues.forEach((str) => {
@@ -40,7 +43,8 @@ import Watchlist from './Watchlist.js';
     }, []);
 
     this.setState({
-      filteredEpisodes
+      filteredEpisodes,
+      unsortedFiltered: filteredEpisodes
     })
   }
 
@@ -68,10 +72,37 @@ import Watchlist from './Watchlist.js';
     } else {
       let spliced = this.state.filteredEpisodes.splice(this.state.filteredEpisodes.length -3, 3)
       this.setState({
-      filteredEpisodes: spliced.concat(this.state.filteredEpisodes)
+        filteredEpisodes: spliced.concat(this.state.filteredEpisodes)
       })
-
     }
+  }
+
+  sortEpisodes = () => {
+    if (document.querySelector('.sort').value === 'Avg Rating') {
+      var filteredEpisodes = this.state.filteredEpisodes.sort((a,b) => {
+        return b.rating - a.rating;
+      })
+      var sortedEpisodes = this.state.allEpisodes.sort((a,b) => {
+        return b.rating - a.rating;
+      })
+    } else if (document.querySelector('.sort').value === 'Death Count') {
+      var filteredEpisodes = this.state.filteredEpisodes.sort((a,b) => {
+        return b.deathcount - a.deathcount;
+      })
+      var sortedEpisodes = this.state.allEpisodes.sort((a,b) => {
+        return b.deathcount - a.deathcount;
+      })
+    } else {
+      var filteredEpisodes = this.state.unsortedFiltered
+      var sortedEpisodes = this.state.allEpisodes.sort((a,b) => {
+        return b.name < a.name;
+      })
+    }
+
+    this.setState({
+      filteredEpisodes: filteredEpisodes,
+      allEpisodes: sortedEpisodes
+    })
   }
 
   render() {
@@ -83,13 +114,19 @@ import Watchlist from './Watchlist.js';
             Buffy Flix
           </h1>
         </header>
-        <Search allEpisodes = {allEpisodes} 
+        <div className="search-sort"><Search allEpisodes = {allEpisodes} 
                 filterEpisodes = {this.filterEpisodes} />
+                <select id="sort" className="sort" onChange={this.sortEpisodes}>
+                  <option value ="Episode">Sort by Episode</option>
+                  <option value ="Avg Rating">Avg Rating</option>
+                  <option value ="Death Count">Death Count</option>
+                </select>
+                </div>
         <Carousel filteredEpisodes = {filteredEpisodes} 
                   addToWatchList = {this.addToWatchList} 
                   shiftCarousel = {this.shiftCarousel}/>
         <Watchlist clickedCards={this.state.clickedCards}         
-                                removeFromWatchlist={this.removeFromWatchlist} />
+                   removeFromWatchlist={this.removeFromWatchlist} />
 
       </div>
     );

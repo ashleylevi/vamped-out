@@ -10,13 +10,12 @@ export default class Card extends Component {
   }
 
   handleState = () => {
-    this.setState({
-      clicked: true
-    })
-
     this.props.addToWatchList(this.props.episode)
-  }
 
+   this.setState({
+     clicked: true
+   })
+ }
 
   render() {
     if (this.props.episode.starring.includes('Willow')) {

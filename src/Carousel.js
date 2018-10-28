@@ -8,7 +8,6 @@ export default function Carousel(props) {
     <div className="carousel-wrapper">
       <button className="button left-button"><i className="fas fa-angle-left" onClick={props.shiftCarousel}></i></button>
       <div className="carousel">
-
         <ul>
           {
             props.filteredEpisodes.map((episode) => {
@@ -17,7 +16,6 @@ export default function Carousel(props) {
             })
           }
         </ul>
-
       </div>
       <button className="button right-button"><i className="fas fa-angle-right"onClick={props.shiftCarousel}></i></button>
     </div>

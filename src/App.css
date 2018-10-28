@@ -25,3 +25,12 @@
        2px 2px 2px #000
 }
 
+.search-sort {
+  display: flex;
+}
+
+.sort {
+  height: 26px;
+  margin: 0px 5px;
+  padding: 5px;
+}
