@@ -9,7 +9,8 @@
 
 .watchlist {
   display: flex;
-  max-width: 86.5%;
+  width: 86.5%;
+  justify-content: center;
   overflow: scroll;
   padding: 20px 0;
 }

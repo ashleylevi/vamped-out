@@ -16,20 +16,26 @@ import Watchlist from './Watchlist.js';
       }
   }
 
-  componentDidMount() {
-      Promise.all([fetch('https://whateverly-datasets.herokuapp.com/api/v1/tvShow'),
-        fetch('https://whateverly-datasets.herokuapp.com/api/v1/spinOff')])
-    .then(([responseOne, responseTwo]) => [responseOne.json(), responseTwo.json()])
-    .then(([buffy, angel]) => {
-      console.log(buffy)
-      this.setState({
-        allEpisodes: tvShow.episodes.concat(spinOff.episodes),
-        filteredEpisodes: tvShow.episodes.concat(spinOff.episodes),
-        unsortedFiltered: tvShow.episodes.concat(spinOff.episodes)
-      })
-    })
-    .catch(error => console.log(error))
-  }
+  componentDidMount = () => {
+   let promise1 =fetch('https://whateverly-datasets.herokuapp.com/api/v1/tvShow')
+     .then(response => response.json())
+     .then(buffy => buffy.tvShow.episodes)
+     .catch(error => console.log(error));
+
+   let promise2 = fetch('https://whateverly-datasets.herokuapp.com/api/v1/spinOff')
+     .then(response => response.json())
+     .then(angel => angel.spinoff.episodes)
+     .catch(error => console.log(error));
+
+   Promise.all([promise1, promise2])
+     .then(results => results[0].concat(results[1]))
+     .then(items => {
+       this.setState({
+       allEpisodes: items,
+       filteredEpisodes: items
+     })
+   })
+ }
 
   filterEpisodes = (searchValue) => {
     const filteredEpisodes = this.state.allEpisodes.reduce((arr, episode) => {
@@ -63,7 +69,6 @@ import Watchlist from './Watchlist.js';
   }
 
   shiftCarousel = (e) => {
-    console.log(e.target)
     if (e.target.className === "fas fa-angle-right") {
       let spliced = this.state.filteredEpisodes.splice(0, 3)
       this.setState({

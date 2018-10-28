@@ -16,6 +16,7 @@ ul {
 
 .carousel {
   max-width:86.5%;
+  /*justify-content: center;*/
   padding: 20px 0;
   overflow: hidden;
   display: flex;
@@ -34,7 +35,7 @@ ul {
   color: #af000e;
   font-size: 50px;
   transition: .2s;
-  opacity: .6;
+ /* opacity: .6;*/
 }
 
 .fa-angle-left:hover, .fa-angle-right:hover {
@@ -45,6 +46,5 @@ ul {
 .right-button {
   left: 97%;
 }
-
 
 
