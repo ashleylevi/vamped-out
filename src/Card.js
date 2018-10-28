@@ -31,10 +31,11 @@ export default class Card extends Component {
         <h1 className="card-title">Buffy the Vampire Slayer</h1>
         <div className="caption">
           <h3>Season {this.props.episode.season}</h3>
+          <h4 className="avg-rating">Average Rating: {this.props.episode.rating}</h4>
           <p>{this.props.episode.synopsis}</p>
           <div className="card-buttons">
           <i className="fab fa-imdb"></i>
-          <i className="fas fa-plus" onClick={this.handleState}></i>
+          <i class="far fa-plus-square" onClick={this.handleState}></i>
           </div>
         </div>
       </li>
@@ -50,8 +51,12 @@ export default class Card extends Component {
         <h1 className="card-title">Angel</h1>
         <div className="caption">
           <h3>Season {this.props.episode.season}</h3>
+          <h4 className="avg-rating">Average Rating: {this.props.episode.rating}</h4>
           <p>{this.props.episode.synopsis}</p>
-          <i className="fas fa-plus" onClick={this.handleState}></i>
+          <div className="card-buttons">
+          <i className="fab fa-imdb"></i>
+          <i class="far fa-plus-square" onClick={this.handleState}></i>
+          </div>
         </div>
       </li>
     )
