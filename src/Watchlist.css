@@ -18,3 +18,7 @@
 h2 {
   font-family: 'Open Sans Condensed', sans-serif;
 }
+
+.button {
+  top: 51%;
+}
