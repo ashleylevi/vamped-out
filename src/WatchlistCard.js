@@ -7,12 +7,8 @@ export default class WatchlistCard extends Component {
   }
 
     handleState = () => {
-    this.setState({
-      card: null
-    })
-
-    this.props.removeFromWatchlist(this.props.card)
-  }
+      this.props.removeFromWatchlist(this.props.card)
+    }
 
   render() {
    return (
