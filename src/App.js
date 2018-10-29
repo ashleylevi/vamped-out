@@ -13,7 +13,7 @@ import Watchlist from './Watchlist.js';
         unsortedFiltered: [],
         clickedCards: [] 
       }
-  }
+    }
 
   componentDidMount = () => {
    let promise1 =fetch('https://whateverly-datasets.herokuapp.com/api/v1/tvShow')
@@ -31,7 +31,8 @@ import Watchlist from './Watchlist.js';
      .then(items => {
        this.setState({
        allEpisodes: items,
-       filteredEpisodes: items
+       filteredEpisodes: items,
+       unsortedFiltered: items
      })
    })
  }
@@ -49,7 +50,7 @@ import Watchlist from './Watchlist.js';
 
     this.setState({
       filteredEpisodes,
-      unsortedFiltered: filteredEpisodes
+      unsortedFiltered: this.state.filteredEpisodes
     })
   }
 
@@ -77,6 +78,20 @@ import Watchlist from './Watchlist.js';
       let spliced = this.state.filteredEpisodes.splice(this.state.filteredEpisodes.length -3, 3)
       this.setState({
         filteredEpisodes: spliced.concat(this.state.filteredEpisodes)
+      })
+    }
+  }
+
+  shiftWatchlist = (e) => {
+    if (e.target.className === "fas fa-angle-right") {
+      let spliced = this.state.clickedCards.splice(0, 3)
+      this.setState({
+      clickedCards: this.state.clickedCards.concat(spliced)
+      })
+    } else {
+      let spliced = this.state.clickedCards.splice(this.state.clickedCards.length -3, 3)
+      this.setState({
+        clickedCards: spliced.concat(this.state.clickedCards)
       })
     }
   }
@@ -130,7 +145,8 @@ import Watchlist from './Watchlist.js';
                   addToWatchList = {this.addToWatchList} 
                   shiftCarousel = {this.shiftCarousel}/>
         <Watchlist clickedCards={this.state.clickedCards}         
-                   removeFromWatchlist={this.removeFromWatchlist} />
+                   removeFromWatchlist={this.removeFromWatchlist} 
+                   shiftWatchlist = {this.shiftWatchlist}/>
 
       </div>
     );

@@ -11,10 +11,14 @@
   display: flex;
   width: 86.5%;
   justify-content: center;
-  overflow: scroll;
+  overflow: hidden;
   padding: 20px 0;
 }
 
 h2 {
   font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.button {
+  top: 51%;
 }

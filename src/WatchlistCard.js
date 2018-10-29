@@ -7,17 +7,13 @@ export default class WatchlistCard extends Component {
   }
 
     handleState = () => {
-    this.setState({
-      card: null
-    })
-
-    this.props.removeFromWatchlist(this.props.card)
-  }
+      this.props.removeFromWatchlist(this.props.card)
+    }
 
   render() {
    return (
      <li className="watchlist-card">
-       <h3>{this.props.card.name}</h3>
+       <h3 className="watchlist-title">{this.props.card.name}</h3>
        <p>Season {this.props.card.season}:
         Episode {this.props.card.number}</p>
        <i className="remove-button far fa-times-circle" onClick={this.handleState}></i>
