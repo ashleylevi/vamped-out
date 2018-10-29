@@ -8,6 +8,7 @@ export default function Watchlist(props) {
   return (
     <div className="watchlist-wrapper">
       <h2>Your Watch List</h2>
+      <button className="button left-button"><i className="fas fa-angle-left" onClick={props.shiftCarousel}></i></button>
       <div className="watchlist">
         <ul>
           {
@@ -18,6 +19,7 @@ export default function Watchlist(props) {
           }
         </ul>
       </div>
+        <button className="button right-button"><i className="fas fa-angle-right"onClick={props.shiftCarousel}></i></button>
     </div>
   );
 }
