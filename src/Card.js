@@ -34,7 +34,7 @@ export default class Card extends Component {
           <h4 className="avg-rating">Average Rating: {this.props.episode.rating}</h4>
           <p>{this.props.episode.synopsis}</p>
           <div className="card-buttons">
-          <i className="fab fa-imdb"></i>
+            <a href={this.props.episode.url} target="_blank" className="data-tooltip"><i className="fab fa-imdb"></i></a>
           <i class="far fa-plus-square" onClick={this.handleState}></i>
           </div>
         </div>
