@@ -55,9 +55,11 @@ import Watchlist from './Watchlist.js';
   }
 
   addToWatchList = (clickedEpisode) => {
-    this.setState({
-      clickedCards: [...this.state.clickedCards, clickedEpisode]
-    })
+    if (!this.state.clickedCards.includes(clickedEpisode)) {
+      this.setState({
+        clickedCards: [...this.state.clickedCards, clickedEpisode]
+      })
+    }
   }
 
   removeFromWatchlist = (removedCard) => {
@@ -72,12 +74,16 @@ import Watchlist from './Watchlist.js';
     if (e.target.className === "fas fa-angle-right") {
       let spliced = this.state.filteredEpisodes.splice(0, 3)
       this.setState({
-      filteredEpisodes: this.state.filteredEpisodes.concat(spliced)
+        filteredEpisodes: this.state.filteredEpisodes.concat(spliced),
+        allEpisodes: this.state.filteredEpisodes.concat(spliced),
+        unsortedFiltered: this.state.filteredEpisodes.concat(spliced)
       })
     } else {
       let spliced = this.state.filteredEpisodes.splice(this.state.filteredEpisodes.length -3, 3)
       this.setState({
-        filteredEpisodes: spliced.concat(this.state.filteredEpisodes)
+        filteredEpisodes: spliced.concat(this.state.filteredEpisodes),
+        allEpisodes: spliced.concat(this.state.filteredEpisodes),
+        unsortedFiltered: spliced.concat(this.state.filteredEpisodes)
       })
     }
   }
@@ -85,8 +91,9 @@ import Watchlist from './Watchlist.js';
   shiftWatchlist = (e) => {
     if (e.target.className === "fas fa-angle-right") {
       let spliced = this.state.clickedCards.splice(0, 3)
+      console.log(this.state.clicke)
       this.setState({
-      clickedCards: this.state.clickedCards.concat(spliced)
+        clickedCards: this.state.clickedCards.concat(spliced)
       })
     } else {
       let spliced = this.state.clickedCards.splice(this.state.clickedCards.length -3, 3)
@@ -125,7 +132,7 @@ import Watchlist from './Watchlist.js';
   }
 
   render() {
-    const { allEpisodes, filteredEpisodes } = this.state
+    const { allEpisodes, filteredEpisodes, unsortedFiltered, clickedCards } = this.state
     return (
       <div className="App">
         <header className="App-header">
@@ -134,17 +141,18 @@ import Watchlist from './Watchlist.js';
           </h1>
         </header>
         <div className="search-sort"><Search allEpisodes = {allEpisodes} 
-                filterEpisodes = {this.filterEpisodes} />
-                <select id="sort" className="sort" onChange={this.sortEpisodes}>
-                  <option value ="Episode">Sort by Episode</option>
-                  <option value ="Avg Rating">Avg Rating</option>
-                  <option value ="Death Count">Death Count</option>
-                </select>
-                </div>
+                                             filterEpisodes = {this.filterEpisodes} />
+          <select id="sort" className="sort" onChange={this.sortEpisodes}>
+            <option value ="Episode">Sort by Episode</option>
+            <option value ="Avg Rating">Avg Rating</option>
+            <option value ="Death Count">Death Count</option>
+          </select>
+        </div>
         <Carousel filteredEpisodes = {filteredEpisodes} 
                   addToWatchList = {this.addToWatchList} 
                   shiftCarousel = {this.shiftCarousel}/>
-        <Watchlist clickedCards={this.state.clickedCards}         
+        <Watchlist allEpisodes={allEpisodes} 
+                   clickedCards={clickedCards}        
                    removeFromWatchlist={this.removeFromWatchlist} 
                    shiftWatchlist = {this.shiftWatchlist}/>
 
