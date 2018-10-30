@@ -1,7 +1,6 @@
 import React from 'react';
-import './Watchlist.css';
 import WatchlistCard from './WatchlistCard.js';
-import './Watchlist.css';
+import './Watchlist.scss';
 
 
 export default function Watchlist(props) {
@@ -23,3 +22,4 @@ export default function Watchlist(props) {
     </div>
   );
 }
+// 

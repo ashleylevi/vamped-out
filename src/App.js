@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './App.scss';
 import Search from './Search.js';
 import Carousel from './Carousel.js';
 import Watchlist from './Watchlist.js';

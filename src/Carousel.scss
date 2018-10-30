@@ -7,40 +7,40 @@ ul {
 }
 
 .carousel-wrapper {
-  position: relative;
-  width:90%;
+  display: flex;
   height: 480px;
-  display:flex;
   justify-content: center;
-
+  position: relative;
+  width: 90%;
 }
 
 .carousel {
-  max-width:86.5%;
-  padding: 20px 0;
-  overflow: hidden;
   display: flex;
+  max-width: 86.5%;
+  overflow: hidden;
+  padding: 20px 0;
 }
 
 .button {
   background: none;
   border: none;
-  position: absolute;
-  z-index: 50;
-  top: 40%;
   left: 0;
+  position: absolute;
+  top: 40%;
+  z-index: 50;
 }
 
-.fa-angle-left, .fa-angle-right {
+.fa-angle-left, 
+.fa-angle-right {
   color: #af000e;
   font-size: 50px;
   transition: .2s;
- /* opacity: .6;*/
 }
 
-.fa-angle-left:hover, .fa-angle-right:hover {
-  transform: scale(1.4);
+.fa-angle-left:hover, 
+.fa-angle-right:hover {
   cursor: pointer;
+  transform: scale(1.4);
 }
 
 .right-button {
