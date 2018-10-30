@@ -34,8 +34,8 @@ export default class Card extends Component {
           <h4 className="avg-rating">Average Rating: {this.props.episode.rating}</h4>
           <p>{this.props.episode.synopsis}</p>
           <div className="card-buttons">
-            <a href={this.props.episode.url} target="_blank" className="data-tooltip"><i className="fab fa-imdb"></i></a>
-          <i class="far fa-plus-square" onClick={this.handleState}></i>
+            <a href={this.props.episode.url} target="_blank" data-tooltip="Watch Episode Here"><i className="fab fa-imdb"></i></a>
+          <a href="" data-tooltip="Add to Watchlist"><i class="far fa-plus-square" title="Add Episode to" onClick={this.handleState}></i></a>
           </div>
         </div>
       </li>
@@ -56,8 +56,8 @@ export default class Card extends Component {
           <h4 className="avg-rating">Average Rating: {this.props.episode.rating}</h4>
           <p>{this.props.episode.synopsis}</p>
           <div className="card-buttons">
-          <i className="fab fa-imdb"></i>
-          <i class="far fa-plus-square" onClick={this.handleState}></i>
+            <a href={this.props.episode.url} target="_blank" data-tooltip="Watch Episode Here"><i className="fab fa-imdb"></i></a>
+          <i class="far fa-plus-square"  onClick={this.handleState}></i>
           </div>
         </div>
       </li>

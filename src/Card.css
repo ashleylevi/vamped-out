@@ -120,51 +120,54 @@ margin: 0 10px 10px 10px;
 
 }
 
-.data-tooltip {
+[data-tooltip] {
   position: relative;
   z-index: 2;
   cursor: pointer;
 
 }
 
-.data-tooltip:before,
-.data-tooltip:after {
+[data-tooltip]:before,
+[data-tooltip]:after {
   visibility: hidden;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   pointer-events: none;
 }
-
-.data-tooltip:before {
+[data-tooltip]:before {
   position: absolute;
-  bottom: 150%;
+  bottom: -150%;
   left: 50%;
-  margin-bottom: 5px;
+/*  margin-bottom: 5px;*/
   margin-left: -80px;
   padding: 7px;
-  width: 160px;
+  width: 100px;
+/*  height: 13px;*/
+  padding-bottom: 10px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
   background-color: #000;
-  background-color: hsla(0, 0%, 20%, 0.9);
-  color: #fff;
+  background-color: #fff;
+  color: hsla(0, 0%, 20%, 0.9);
   content: attr(data-tooltip);
   text-align: center;
   font-size: 14px;
   line-height: 1.2;
+  font-weight: 700;
 }
 
-.data-tooltip:hover:before,
-.data-tooltip:hover:after {
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
   visibility: visible;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
+  font-size: 9px;
 }
 
-.data-tooltip {
+[data-tooltip] {
   font-size: 23px;
   opacity: 1;
   transition: .3s;
