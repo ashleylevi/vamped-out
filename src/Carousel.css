@@ -9,6 +9,7 @@ ul {
 .carousel-wrapper {
   position: relative;
   width:90%;
+  height: 480px;
   display:flex;
   justify-content: center;
 
@@ -16,7 +17,6 @@ ul {
 
 .carousel {
   max-width:86.5%;
-  /*justify-content: center;*/
   padding: 20px 0;
   overflow: hidden;
   display: flex;
