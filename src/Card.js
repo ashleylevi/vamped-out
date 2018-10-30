@@ -44,8 +44,8 @@ export default class Card extends Component {
     return (
       <li className="card">
       <div className="background" style={{ backgroundImage: `url(${this.props.episode.image})` }}></div>
-      <div className="overlay"></div>
       <h3 className="episode-name">
+      <div className="overlay"></div>
         {
           this.props.episode.name
         }
