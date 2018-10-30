@@ -1,22 +1,21 @@
 @font-face {
     font-family: 'buffiedregular';
-    src: url(buffied/BUFFIED_.TTF);
-    font-weight: normal;
     font-style: normal;
-
+    font-weight: normal;
+    src: url(buffied/BUFFIED_.TTF);
 }
 
 .App {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
 }
 
 .header {
-  text-align: center;
   font-family: 'buffiedregular';
   font-size: 100px;
+  text-align: center;
   text-shadow:
        3px 3px 8px #af000e, 
        3px 3px 8px #000, 
