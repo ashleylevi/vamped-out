@@ -35,7 +35,7 @@ export default class Card extends Component {
           <p>{this.props.episode.synopsis}</p>
           <div className="card-buttons">
             <a href={this.props.episode.url} target="_blank" data-tooltip="Watch Episode Here"><i className="fab fa-imdb"></i></a>
-          <i class="far fa-plus-square" onClick={this.handleState}></i>
+          <a href="" data-tooltip="Add to Watchlist"><i class="far fa-plus-square" title="Add Episode to" onClick={this.handleState}></i></a>
           </div>
         </div>
       </li>
