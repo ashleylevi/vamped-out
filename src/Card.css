@@ -141,9 +141,9 @@ margin: 0 10px 10px 10px;
   left: 50%;
 /*  margin-bottom: 5px;*/
   margin-left: -80px;
-  padding: 7px;
+  padding: 3px;
   width: 100px;
-/*  height: 13px;*/
+  height: 13px;
   padding-bottom: 10px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -152,11 +152,12 @@ margin: 0 10px 10px 10px;
   background-color: #fff;
   color: hsla(0, 0%, 20%, 0.9);
   content: attr(data-tooltip);
-  text-align: center;
+  /*text-align: center;*/
   font-size: 14px;
   line-height: 1.2;
   font-weight: 700;
 }
+
 
 [data-tooltip]:hover:before,
 [data-tooltip]:hover:after {
