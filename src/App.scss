@@ -29,7 +29,14 @@
 }
 
 .sort {
+  border-radius: 30px;
   height: 26px;
   margin: 0px 5px;
   padding: 5px;
+  cursor: pointer;
+  background-color: white;
+}
+
+option {
+  border-radius: 30px;
 }

@@ -105,8 +105,12 @@ p {
 
 .fa-plus-square:hover, 
 .fa-imdb:hover {
-  transform: scale(1.15);
+  transform: scale(1.2);
   cursor: pointer;
+}
+
+.fa-imdb {
+  transition: .3s;
 }
 
 .card-buttons {
@@ -131,7 +135,6 @@ p {
   position: absolute;
   bottom: -150%;
   left: 50%;
-/*  margin-bottom: 5px;*/
   margin-left: -80px;
   padding: 3px;
   width: 100px;
@@ -144,7 +147,6 @@ p {
   background-color: #fff;
   color: hsla(0, 0%, 20%, 0.9);
   content: attr(data-tooltip);
-  /*text-align: center;*/
   font-size: 14px;
   line-height: 1.2;
   font-weight: 700;
