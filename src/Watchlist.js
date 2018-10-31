@@ -6,7 +6,7 @@ import './Watchlist.scss';
 export default function Watchlist(props) {
   return (
     <div className="watchlist-wrapper">
-      <h2>Your Watch List</h2>
+      <h2 className="watchlist-header">Your Watchlist</h2>
       <button className="button watchlist-button left-button"><i className="fas fa-angle-left" onClick={props.shiftWatchlist}></i></button>
       <div className="watchlist">
         <ul>
