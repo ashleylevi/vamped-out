@@ -60,7 +60,7 @@ import Trie from '@ashleyplevi/autocomplete';
 
   filterEpisodes = (searchValue) => {
     const filteredEpisodes = this.state.allEpisodes.reduce((arr, episode) => {
-      let episodeValues = [].concat(...Object.values(episode))
+      const episodeValues = [].concat(...Object.values(episode))
       episodeValues.forEach((str) => {
         if (str.toString().toLowerCase().includes(searchValue.toLowerCase()) && !arr.includes(episode)) {
           arr.push(episode)
@@ -89,10 +89,9 @@ import Trie from '@ashleyplevi/autocomplete';
   }
 
   removeFromWatchlist = (removedCard) => {
-    var cardIndex = this.state.clickedCards.indexOf(removedCard);
-    this.state.clickedCards.splice(cardIndex, 1)
+    const newCards = this.state.clickedCards.filter(card => card != removedCard);
     this.setState({
-      clickedCards: this.state.clickedCards
+      clickedCards: newCards
     })  
   }
 
