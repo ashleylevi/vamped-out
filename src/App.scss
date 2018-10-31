@@ -29,7 +29,26 @@
 }
 
 .sort {
-  height: 26px;
-  margin: 0px 5px;
-  padding: 5px;
+  height: 27px;
+  padding: 0 29px 0 12px;
+}
+
+
+select {
+  -webkit-appearance: none;
+  appearance: none;
+  border: 1px solid #000;
+  line-height: 1;
+  outline: 0;
+  color: #000;
+  border-color: #000;
+  border-radius: 0px;
+  
+  background: linear-gradient(#000, #000) no-repeat,
+              linear-gradient(-135deg, rgba(255,255,255,0) 50%, white 50%) no-repeat,
+              linear-gradient(-225deg, rgba(255,255,255,0) 50%, white 50%) no-repeat,
+              linear-gradient(#000, #000) no-repeat;
+  background-color: white;
+  background-size: 1px 100%, 20px 20px, 20px 20px, 20px 60%;
+  background-position: right 20px center, right bottom, right bottom, right bottom;   
 }
