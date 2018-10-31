@@ -11,8 +11,8 @@ export default function Watchlist(props) {
       <div className="watchlist">
         <ul>
           {
-            props.clickedCards.map(card => {
-              return <WatchlistCard card={card}
+            props.clickedCards.map((card, index) => {
+              return <WatchlistCard key={index} card={card}
                       removeFromWatchlist={props.removeFromWatchlist} />
             })
           }
@@ -22,4 +22,3 @@ export default function Watchlist(props) {
     </div>
   );
 }
-// 

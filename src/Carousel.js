@@ -10,8 +10,8 @@ export default function Carousel(props) {
       <div className="carousel">
         <ul>
           {
-            props.filteredEpisodes.map((episode) => {
-              return <Card episode={episode} 
+            props.filteredEpisodes.map((episode, index) => {
+              return <Card key={index} episode={episode} 
                            addToWatchList = {props.addToWatchList}/>
             })
           }
