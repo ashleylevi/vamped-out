@@ -3,6 +3,7 @@ h2 {
 }
 
 .watchlist-title {
+  padding-top: 15px;
   font-size: 16px;
   margin: 0;
   z-index: 2;
@@ -11,7 +12,6 @@ h2 {
 .watchlist-card {
   background: url('https://cdn.hipwallpaper.com/i/63/31/v0qCxb.png');
   background-size: cover;
-  /*padding: 10px;*/
   height: 110px;
   position: relative;
 }

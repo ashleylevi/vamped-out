@@ -4,6 +4,7 @@ import Search from './Search.js';
 import Carousel from './Carousel.js';
 import Watchlist from './Watchlist.js';
 
+
   class App extends Component {
     constructor() {
       super();
@@ -71,34 +72,35 @@ import Watchlist from './Watchlist.js';
   }
 
   shiftCarousel = (e) => {
+    const { filteredEpisodes } = this.state;
     if (e.target.className === "fas fa-angle-right") {
-      let spliced = this.state.filteredEpisodes.splice(0, 3)
+      let spliced = filteredEpisodes.splice(0, 3)
       this.setState({
-        filteredEpisodes: this.state.filteredEpisodes.concat(spliced),
-        allEpisodes: this.state.filteredEpisodes.concat(spliced),
-        unsortedFiltered: this.state.filteredEpisodes.concat(spliced)
+        filteredEpisodes: filteredEpisodes.concat(spliced),
+        allEpisodes: filteredEpisodes.concat(spliced),
+        unsortedFiltered: filteredEpisodes.concat(spliced)
       })
     } else {
-      let spliced = this.state.filteredEpisodes.splice(this.state.filteredEpisodes.length -3, 3)
+      let spliced = filteredEpisodes.splice(filteredEpisodes.length -3, 3)
       this.setState({
-        filteredEpisodes: spliced.concat(this.state.filteredEpisodes),
-        allEpisodes: spliced.concat(this.state.filteredEpisodes),
-        unsortedFiltered: spliced.concat(this.state.filteredEpisodes)
+        filteredEpisodes: spliced.concat(filteredEpisodes),
+        allEpisodes: spliced.concat(filteredEpisodes),
+        unsortedFiltered: spliced.concat(filteredEpisodes)
       })
     }
   }
 
   shiftWatchlist = (e) => {
+    const { clickedCards } = this.state;
     if (e.target.className === "fas fa-angle-right") {
-      let spliced = this.state.clickedCards.splice(0, 3)
-      console.log(this.state.clicke)
+      let spliced = clickedCards.splice(0, 3)
       this.setState({
-        clickedCards: this.state.clickedCards.concat(spliced)
+        clickedCards: clickedCards.concat(spliced)
       })
     } else {
-      let spliced = this.state.clickedCards.splice(this.state.clickedCards.length -3, 3)
+      let spliced = clickedCards.splice(clickedCards.length -3, 3)
       this.setState({
-        clickedCards: spliced.concat(this.state.clickedCards)
+        clickedCards: spliced.concat(clickedCards)
       })
     }
   }
