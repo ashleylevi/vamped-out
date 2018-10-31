@@ -32,6 +32,7 @@ export default class Card extends Component {
         <div className="caption">
           <h3>Season {this.props.episode.season}</h3>
           <h4 className="avg-rating">Average Rating: {this.props.episode.rating}</h4>
+          <h4 className="death-count">Death Count: {this.props.episode.deathcount}</h4>
           <p>{this.props.episode.synopsis}</p>
           <div className="card-buttons">
             <a href={this.props.episode.url} target="_blank" data-tooltip="Watch Episode Here"><i className="fab fa-imdb"></i></a>
@@ -54,6 +55,7 @@ export default class Card extends Component {
         <div className="caption">
           <h3>Season {this.props.episode.season}</h3>
           <h4 className="avg-rating">Average Rating: {this.props.episode.rating}</h4>
+          <h4 className="death-count">Death Count: {this.props.episode.deathcount}</h4>
           <p>{this.props.episode.synopsis}</p>
           <div className="card-buttons">
             <a href={this.props.episode.url} target="_blank" data-tooltip="Watch Episode Here"><i className="fab fa-imdb"></i></a>

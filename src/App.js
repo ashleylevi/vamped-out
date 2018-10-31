@@ -3,6 +3,7 @@ import './App.scss';
 import Search from './Search.js';
 import Carousel from './Carousel.js';
 import Watchlist from './Watchlist.js';
+import Trie from '@ashleyplevi/autocomplete';
 
 
   class App extends Component {
@@ -12,8 +13,9 @@ import Watchlist from './Watchlist.js';
         allEpisodes: [],
         filteredEpisodes: [],
         unsortedFiltered: [],
-        clickedCards: [] 
-      }
+        clickedCards: [],
+        trie: new Trie()
+      } 
     }
 
   componentDidMount = () => {
@@ -35,6 +37,24 @@ import Watchlist from './Watchlist.js';
        filteredEpisodes: items,
        unsortedFiltered: items
      })
+
+       let trieArray = []
+       this.state.allEpisodes.map((episode) => {
+        trieArray.push(episode.name)
+        episode.weapons.forEach((weapon) => {
+            if (!trieArray.includes(weapon)) {
+              trieArray.push(weapon)
+            }
+          })
+
+          episode.starring.forEach((character) => {
+            if (!trieArray.includes(character)) {
+              trieArray.push(character)
+            }
+          })
+       }) 
+        
+        this.state.trie.populate(trieArray)
    })
  }
 
@@ -56,10 +76,15 @@ import Watchlist from './Watchlist.js';
   }
 
   addToWatchList = (clickedEpisode) => {
+    let watchlistButton = document.querySelectorAll('.watchlist-button')
     if (!this.state.clickedCards.includes(clickedEpisode)) {
       this.setState({
         clickedCards: [...this.state.clickedCards, clickedEpisode]
       })
+
+      watchlistButton.forEach((button) => {
+         button.classList.add('show');
+    })
     }
   }
 
@@ -143,7 +168,9 @@ import Watchlist from './Watchlist.js';
           </h1>
         </header>
         <div className="search-sort"><Search allEpisodes = {allEpisodes} 
-                                             filterEpisodes = {this.filterEpisodes} />
+                                             filterEpisodes = {this.filterEpisodes}
+                                             charactersArray = {this.charactersArray}
+                                             trie = {this.state.trie} />
           <select id="sort" className="sort" onChange={this.sortEpisodes}>
             <option value ="Episode">Sort by Episode</option>
             <option value ="Avg Rating">Avg Rating</option>

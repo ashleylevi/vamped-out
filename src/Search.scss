@@ -3,4 +3,9 @@ input {
   height: 23px;
   margin-bottom: 50px;
   width: 550px;
+
+  &::-webkit-calendar-picker-indicator {
+    display: none;
+  }
 }
+

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Search.scss';
 import './App.scss';
-import Trie from 'ashleyplevi/autocomplete';
+import Trie from '@ashleyplevi/autocomplete';
 
 //instantiate a new tree
 //populate it with (start with random words) whatever data a user can search for by typing in the search
@@ -23,10 +23,12 @@ export default class Search extends Component {
 
   handleState = (e) => {
     this.setState({
-      searchValue: e.target.value
+      searchValue: e.target.value,
+      suggestedWords: this.props.trie.suggest(e.target.value)
     })
 
     this.props.filterEpisodes(e.target.value);
+
   } 
 
 
@@ -35,11 +37,12 @@ export default class Search extends Component {
       <div className="search-bar-container">
         <input type="text" list="characters" placeholder="  Search for your favorite Buffy or Angel episodes" onKeyUp={this.handleState}/>
         <datalist id="characters">
-        {
+          { this.state.suggestedWords.map((word) => {
+            return  <option value={word} />
 
-          
-        }
-
+          })
+           
+          }
         </datalist>
       </div>
     );
