@@ -1,6 +1,6 @@
 Buffy Flix
 
-Buffy Flix is an web based application that uses a custom built API based the popular WB Network show “Buffy the Vampire Slayer.” Buffy Flix  gives fans of “Buffy the Vampire Slayer” and its’ spinoff show “Angel” the ability to search for their favorite episodes using a variety of search parameters.
+Buffy Flix is a web based application that uses a custom built API based the popular WB Network show “Buffy the Vampire Slayer.” Buffy Flix  gives fans of “Buffy the Vampire Slayer” and its’ spinoff show “Angel” the ability to search for their favorite episodes using a variety of search parameters.
 
 This application was created as an introduction to React project during Module 2 at Turing School of Software and Design. The API used was inspired by a dataset created by Turing student, Ashley Levi. This project was the teams first experience to both use the React framework to build an application in addition to managing a large set of data.  
 
