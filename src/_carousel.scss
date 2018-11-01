@@ -25,25 +25,23 @@ ul {
   background: none;
   border: none;
   left: 0;
+  outline: none;
   position: absolute;
   top: 40%;
-  z-index: 50;
-  outline: none;
-}
-
-.fa-angle-left, 
-.fa-angle-right {
-  color: #af000e;
-  font-size: 50px;
-  transition: .2s;
-}
-
-.fa-angle-left:hover, 
-.fa-angle-right:hover {
-  cursor: pointer;
-  transform: scale(1.4);
 }
 
 .right-button {
   left: 97%;
+}
+
+.fa-angle-right,
+.fa-angle-left {
+  color: #af000e;
+  font-size: 50px;
+  transition: .2s;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.4);
+  }
 }

@@ -8,16 +8,11 @@
     2px 2px 2px #000
 }
 
-.avg-rating, .death-count {
-  font-size: 10px;
-}
-
 a {
   color: white;
 }
 
 .episode-name {
-  font-weight: 700;
   margin: 0 14px;
   z-index: 2;
 }
@@ -25,7 +20,7 @@ a {
 li {
   border: 1px solid white;
   color: white;
-  display:flex;
+  display: flex;
   flex-direction: column;
   height: 390px;
   justify-content: flex-end;

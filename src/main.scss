@@ -4,18 +4,24 @@
 @import 'watchlist';
 @import 'watchlistCard';
 
+$main-font: 'Open Sans Condensed', sans-serif;
 
 h2 {
   color: white;
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: $main-font;
 }
 
-h3, h4 {
+h3 {
   font-size: 15px;
   margin: 14px;
   font-weight: 700;
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: $main-font;
   text-transform: uppercase;
+}
+
+h4 {
+  @extend h3;
+  font-size: 10px;
 }
 
 p {

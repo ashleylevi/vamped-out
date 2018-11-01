@@ -1,15 +1,14 @@
-.watchlist-title {
-  padding-top: 15px;
-  font-size: 16px;
-  margin: 0;
-  z-index: 2;
-}
-
 .watchlist-card {
   background: url('https://cdn.hipwallpaper.com/i/63/31/v0qCxb.png');
   background-size: cover;
-  height: 110px;
+  height: 120px;
   position: relative;
+}
+
+.watchlist-title {
+  font-size: 16px;
+  margin: 0;
+  z-index: 2;
 }
 
 .fa-times-circle {
