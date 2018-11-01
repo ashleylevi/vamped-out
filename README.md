@@ -38,11 +38,24 @@ The search bar allows a user to choose from three search parameters. The default
 
 
 
-Additional Development:
+### Additional Development:
 * Expanded API to include all seasons of both “Buffy the Vampire Slayer” and  “Angel.”
 * Expanded search parameters to include specific seasons, episodes, character appearances and weapons used.
 * Improved search bar styling that better incorporates the show’s theme.
 * Improved transitions for carousel and watchlist
 * Video clips of episodes when carousel cards are hovered.
 * Ongoing updates based on user testing.
+
+
+### Installation and Setup Instructions
+
+1. Clone down this repository.
+
+2. cd into directory.
+
+3. Run `npm install` in terminal.
+
+4. Run `npm start` in terminal to start server.
+
+
 
