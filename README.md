@@ -4,7 +4,7 @@
 
 *Buffy Flix* is a web based application that uses a custom built API based the popular WB Network show “Buffy the Vampire Slayer.” *Buffy Flix*  gives fans of “Buffy the Vampire Slayer” and its’ spinoff show “Angel” the ability to search for their favorite episodes using a variety of search parameters.
 
-This application was created as an introduction to React project during Module 2 at Turing School of Software and Design. The API used was inspired by a dataset created by Turing student, Ashley Levi. The project was the build team's first experience using the React framework to build an application in addition to managing a large set of data.  
+This application was created as an introduction to React project during Module 2 at Turing School of Software and Design. The API used was inspired by a dataset created by Turing student, Ashley Levi. The project was the build team's first experience using the React framework to build an application while managing a large data set.  
 
 Our baseline style was inspired by the Netflix carousel which allows a user to shuffle through movies . The home page of Buffy Flix is populated by “Buffy the Vampire Slayer” episodes starting with episode 1 and can be shuffled with arrow buttons. 
 
@@ -56,8 +56,9 @@ The search bar allows a user to choose from three search parameters. The default
 3. Run `npm install` in terminal.
 
 4. Run `npm start` in terminal to start server.
-===
 
-Buffy Flix build team: Kylie Stanley, Ashley Levi, Kevin Ryan
+
+### Buffy Flix build team: 
+Kylie Stanley, Ashley Levi, Kevin Ryan
 
 
