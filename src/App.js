@@ -6,57 +6,56 @@ import Watchlist from './Watchlist.js';
 import Trie from '@ashleyplevi/autocomplete';
 
 
-  class App extends Component {
-    constructor() {
-      super();
-      this.state = {
-        allEpisodes: [],
-        filteredEpisodes: [],
-        unsortedFiltered: [],
-        clickedCards: [],
-        trie: new Trie()
-      } 
-    }
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      allEpisodes: [],
+      filteredEpisodes: [],
+      unsortedFiltered: [],
+      clickedCards: [],
+      trie: new Trie()
+    } 
+  }
 
   componentDidMount = () => {
-   let promise1 =fetch('https://whateverly-datasets.herokuapp.com/api/v1/tvShow')
-     .then(response => response.json())
-     .then(buffy => buffy.tvShow.episodes)
-     .catch(error => console.log(error));
+    let promise1 =fetch('https://whateverly-datasets.herokuapp.com/api/v1/tvShow')
+      .then(response => response.json())
+      .then(buffy => buffy.tvShow.episodes)
+      .catch(error => console.log(error));
 
-   let promise2 = fetch('https://whateverly-datasets.herokuapp.com/api/v1/spinOff')
-     .then(response => response.json())
-     .then(angel => angel.spinoff.episodes)
-     .catch(error => console.log(error));
+    let promise2 = fetch('https://whateverly-datasets.herokuapp.com/api/v1/spinOff')
+      .then(response => response.json())
+      .then(angel => angel.spinoff.episodes)
+      .catch(error => console.log(error));
 
-   Promise.all([promise1, promise2])
-     .then(results => results[0].concat(results[1]))
-     .then(items => {
-       this.setState({
-       allEpisodes: items,
-       filteredEpisodes: items,
-       unsortedFiltered: items
-     })
+    Promise.all([promise1, promise2])
+      .then(results => results[0].concat(results[1]))
+      .then(items => {
+        this.setState({
+          allEpisodes: items,
+          filteredEpisodes: items,
+          unsortedFiltered: items
+        })
 
-       let trieArray = []
-       this.state.allEpisodes.map((episode) => {
+      let trieArray = []
+      this.state.allEpisodes.map((episode) => {
         trieArray.push(episode.name)
         episode.weapons.forEach((weapon) => {
-            if (!trieArray.includes(weapon)) {
-              trieArray.push(weapon)
-            }
-          })
+          if (!trieArray.includes(weapon)) {
+            trieArray.push(weapon)
+          }
+        })
 
-          episode.starring.forEach((character) => {
-            if (!trieArray.includes(character)) {
-              trieArray.push(character)
-            }
-          })
-       }) 
-        
-        this.state.trie.populate(trieArray)
-   })
- }
+        episode.starring.forEach((character) => {
+          if (!trieArray.includes(character)) {
+            trieArray.push(character)
+          }
+        })
+      })   
+      this.state.trie.populate(trieArray)
+    })
+  }
 
   filterEpisodes = (searchValue) => {
     const filteredEpisodes = this.state.allEpisodes.reduce((arr, episode) => {
@@ -66,7 +65,7 @@ import Trie from '@ashleyplevi/autocomplete';
           arr.push(episode)
         }
       })
-      return arr;
+    return arr;
     }, []);
 
     this.setState({
@@ -84,7 +83,7 @@ import Trie from '@ashleyplevi/autocomplete';
 
       watchlistButton.forEach((button) => {
          button.classList.add('show');
-    })
+      })
     }
   }
 
@@ -178,11 +177,11 @@ import Trie from '@ashleyplevi/autocomplete';
         </div>
         <Carousel filteredEpisodes = {filteredEpisodes} 
                   addToWatchList = {this.addToWatchList} 
-                  shiftCarousel = {this.shiftCarousel}/>
+                  shiftCarousel = {this.shiftCarousel} />
         <Watchlist allEpisodes={allEpisodes} 
                    clickedCards={clickedCards}        
                    removeFromWatchlist={this.removeFromWatchlist} 
-                   shiftWatchlist = {this.shiftWatchlist}/>
+                   shiftWatchlist = {this.shiftWatchlist} />
 
       </div>
     );
