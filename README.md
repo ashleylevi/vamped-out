@@ -33,7 +33,7 @@ Below the main carousel is a watchlist which is populated with episodes the user
 The search bar allows a user to choose from three search parameters. The default parameter is set to search by episode. Additional dropdown options include average episode rating and “death count.” An auto complete feature populates a dropdown with information that matches the users input as they type.   
 
 <img width="1407" alt="screen shot 2018-10-31 at 4 43 31 pm" src="https://user-images.githubusercontent.com/36204045/47824289-cc912380-dd31-11e8-8241-bafbc01be9b3.png">
-===
+
 
 
 
