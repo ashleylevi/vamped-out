@@ -26,3 +26,5 @@ Additional Development:
 * Improved search bar styling that better incorporates the show’s theme.
 * Improved transitions for carousel and watchlist
 * Video clips of episodes when carousel cards are hovered.
+* Ongoing updates based on user testing.
+
