@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import './Search.scss';
-import './App.scss';
+import './main.scss';
 import Trie from '@ashleyplevi/autocomplete';
 
 //instantiate a new tree

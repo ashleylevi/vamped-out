@@ -1,6 +1,6 @@
 import React from 'react';
 import WatchlistCard from './WatchlistCard.js';
-import './Watchlist.scss';
+import './main.scss';
 
 
 export default function Watchlist(props) {

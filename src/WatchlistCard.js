@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './WatchlistCard.scss';
+import './main.scss';
 
 export default class WatchlistCard extends Component {
   constructor (props) {

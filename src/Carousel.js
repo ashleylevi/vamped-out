@@ -1,5 +1,5 @@
 import React from 'react';
-import './Carousel.scss';
+import './main.scss';
 import Card from './Card.js';
 
 
