@@ -2,11 +2,12 @@ import React from 'react';
 import './main.scss';
 import Card from './Card.js';
 
-
 export default function Carousel(props) {
   return (
     <div className="carousel-wrapper">
-      <button className="button left-button" id="carousel-button"><i className="fas fa-angle-left" onClick={props.shiftCarousel}></i></button>
+      <button className="button left-button" id="carousel-button">
+        <i className="fas fa-angle-left" onClick={props.shiftCarousel}></i>
+      </button>
       <div className="carousel">
         <ul>
           {
@@ -17,7 +18,9 @@ export default function Carousel(props) {
           }
         </ul>
       </div>
-      <button className="button right-button" id="carousel-button"><i className="fas fa-angle-right"onClick={props.shiftCarousel}></i></button>
+      <button className="button right-button" id="carousel-button">
+        <i className="fas fa-angle-right"onClick={props.shiftCarousel}></i>
+      </button>
     </div>
-    );
-  }
+  );
+}
