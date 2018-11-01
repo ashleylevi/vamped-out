@@ -1,0 +1,33 @@
+@import 'card';
+@import 'carousel';
+@import 'search';
+@import 'watchlist';
+@import 'watchlistCard';
+
+$main-font: 'Open Sans Condensed', sans-serif;
+
+h2 {
+  color: white;
+  font-family: $main-font;
+}
+
+h3 {
+  font-size: 15px;
+  margin: 14px;
+  font-weight: 700;
+  font-family: $main-font;
+  text-transform: uppercase;
+}
+
+h4 {
+  @extend h3;
+  font-size: 10px;
+}
+
+p {
+  display: none;
+  font-size: 10px;
+  margin: 14px;
+  transition: .7s;
+  z-index: 2;
+}
