@@ -62,11 +62,11 @@ export default class Card extends Component {
             <h4 className="death-count">Death Count: {this.props.episode.deathcount}</h4>
             <p>{this.props.episode.synopsis}</p>
             <div className="card-buttons">
-              <a href={this.props.episode.url} target="_blank" data-tooltip="Watch Episode Here">
+              <a href={this.props.episode.url} target="_blank" className="imdb" data-tooltip="Watch Episode Here">
                 <i className="fab fa-imdb"></i>
               </a>
-              <a data-tooltip="Add Episode to Watchlist">
-                <i className="far fa-plus-square" onClick={this.handleState}></i>
+              <a className="plus" data-tooltip="Add Episode to Watchlist">
+                <i className="far fa-plus-square"onClick={this.handleState}></i>
               </a>
             </div>
           </div>
