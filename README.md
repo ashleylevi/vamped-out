@@ -4,11 +4,11 @@ Buffy Flix is a web based application that uses a custom built API based the pop
 
 This application was created as an introduction to React project during Module 2 at Turing School of Software and Design. The API used was inspired by a dataset created by Turing student, Ashley Levi. This project was the teams first experience to both use the React framework to build an application in addition to managing a large set of data.  
 
-Our baseline style was inspired by the Netflix carousel which allows a user to shuffle through movies . The home  page of Buffy Fix is populated by “Buffy the Vampire Slayer”  episodes starting with episode 1, season 1 and can be shuffled with arrow buttons. 
+Our baseline style was inspired by the Netflix carousel which allows a user to shuffle through movies . The home page of Buffy Flix is populated by “Buffy the Vampire Slayer” episodes starting with episode 1 and can be shuffled with arrow buttons. 
 
 ![buffyflix screenshot 1](https://user-images.githubusercontent.com/36204045/47824237-7a500280-dd31-11e8-9da8-61820c4e353b.png)
 
-Hovering on an episode card reveals information from the specific episode including season, average rating, death count and a brief synopsis. In addition, an add to watchlist button and imdb link are revealed.  When the buttons are hovered over, modal windows provide additional information describing the buttons functions.
+Hovering on an episode card reveals information from the specific episode including season, average rating, death count and a brief synopsis. In addition, an add to watchlist button and imdb link are revealed.  When the buttons are hovered over, modal windows provide additional information describing the button's functions.
 
 ![screenshot hover](https://user-images.githubusercontent.com/36204045/47824277-b6836300-dd31-11e8-96b8-25ca2858a5f2.png)
 
