@@ -1,4 +1,5 @@
-**#Buffy Flix#**
+# **Buffy Flix**
+========
 
 
 *Buffy Flix* is a web based application that uses a custom built API based the popular WB Network show “Buffy the Vampire Slayer.” *Buffy Flix*  gives fans of “Buffy the Vampire Slayer” and its’ spinoff show “Angel” the ability to search for their favorite episodes using a variety of search parameters.
