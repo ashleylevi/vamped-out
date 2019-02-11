@@ -59,6 +59,10 @@ The search bar allows a user to choose from three search parameters. The default
 
 
 ### Buffy Flix build team: 
-Kylie Stanley, Ashley Levi, Kevin Ryan
+Kylie Stanley- https://github.com/KylieStanley
+
+Ashley Levi- https://github.com/ashleylevi
+
+Kevin Ryan- https://github.com/K-Rye
 
 
